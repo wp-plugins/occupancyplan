@@ -1,0 +1,24 @@
+WP Plugin occupancyplan
+
+Copyright (C) [2009]  [Peter Welz]
+
+Dieses Plugin/Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, gemäß Version 3 der Lizenz.
+
+Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
+
+Sie sollten ein Exemplar der GNU General Public License und die zusätzlichen Vereinbarungen zusammen mit diesem Programm erhalten haben. Falls nicht, siehe für die GPL3 Lizenz unter <http://www.gnu.org/licenses/>.
+
+Ergänzend zu §7 Absatz 5 der GPL3 Lizenz enthält diese Lizenz folgende zusätzliche Einschränkung:
+
+Wir weisen ausdrücklich darauf hin, das bei der Ausgabe des Belegungsplans immer das Copyright und folgende Links mit ausgegeben werden müssen:
+http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
+http://www.ostsee-fewo-nienhagen.de/
+http://www.ferienstrandwohnung.de/
+
+Diese Links müßen unverändert belassen werden.  Die betroffene Stelle im Quelltext ist wie folgt markiert:
+
+/* BEGINN ZUSATZ LIZENZ (c) 2009 Peter Welz */
+
+/* ENDE ZUSATZ LIZENZ (c) 2009 Peter Welz */
+
+Bei der Weitergabe des Plugins/Programmes ist neben der GPL3 Lizenz immer diese zusätzliche Einschränkung mit anzugeben/auszuliefern.
