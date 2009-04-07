@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: occupancyplan
-Plugin URI: http://www.gods4u.de/occupancyplan
+Plugin URI: http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
 Description: occupancy plan for Wordpress
 Version: 1.0.0.0
 Author: Peter Welz

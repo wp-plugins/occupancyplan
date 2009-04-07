@@ -1,7 +1,7 @@
 === occupancyplan ===
 Contributors: x000x
 Donate link: http://www.gods4u.de/sponsoren/
-Tags: occupancy plan, Belegungsplan, Belegungsuebersicht, Ferienwohnung, Ferienhaus, Kalender
+Tags: occupancy plan, occupancyplan, occupancy, Belegungsplan, Belegungsuebersicht, Ferienwohnung, Ferienhaus, Kalender
 Requires at least: 2.7.1
 Tested up to: 2.7.1
 Stable tag: trunk
@@ -22,4 +22,4 @@ Viele graphische Einstellungen fuer Farbe und Formen, sowie das Eintragen der be
 
 == Screenshots ==
 
-
+1. Eine beispielhafte Darstellung der Uebersicht (wordpress_plugin_occupancyplan.jpg)
