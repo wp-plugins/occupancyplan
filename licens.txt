@@ -10,7 +10,8 @@ Sie sollten ein Exemplar der GNU General Public License und die zusaetzlichen Ve
 
 Ergaenzend zu $7 Absatz 5 der GPL3 Lizenz enthaelt diese Lizenz folgende zusaetzliche Einschraenkung:
 
-Wir weisen ausdruecklich darauf hin, das bei der Ausgabe des Belegungsplans immer das Copyright und folgende Links mit ausgegeben werden muessen:
+Wir weisen ausdruecklich darauf hin, das bei Aenderungen an diesem Script - auch wenn nur teile des Quelltextes verwendet werden -
+immer das Copyrights und folgende Links mit ausgegeben werden muessen:
 http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
 http://www.ostsee-fewo-nienhagen.de/
 http://www.ferienstrandwohnung.de/
