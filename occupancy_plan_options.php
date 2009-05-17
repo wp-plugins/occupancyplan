@@ -3,20 +3,20 @@
 Plugin Name: occupancyplan
 Plugin URI: http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
 Description: occupancy plan for Wordpress
-Version: 1.0.0.0
+Version: 1.0.1.0
 Author: Peter Welz
 Author URI: http://www.gods4u.de/
 */
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 $plugin_dir = basename(dirname(__FILE__));
-load_plugin_textdomain('Belegungsplan', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
+load_plugin_textdomain('occupancyplan', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
    
 register_activation_hook(__FILE__, 'occupancy_plan_install');
 
 function occupancy_plan_install() {
     global $wpdb;
-    $occupancy_plan_version = "1.0.0.0";
+    $occupancy_plan_version = "1.0.1.0";
 
     $table_name_daten   = $wpdb->prefix . "belegung_daten";
     $table_name_objekte = $wpdb->prefix . "belegung_objekte";   
@@ -95,6 +95,7 @@ table.occupancy_kalender td {
 }
 
 function add_adm_css() {
+   global $wpdb;
 ?>
 <script language="Javascript">
      var ie = false;
@@ -120,7 +121,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("Bitte eine Zahl zwischen 1-100 eingeben!");
+         alert("<? _e('Bitte eine Zahl zwischen 1-100 eingeben!');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -132,13 +133,13 @@ function add_adm_css() {
          }
        }
        if (chkZ == -1) {
-         alert("Bei \"Anzahl Monate\" muss eine Zahl eingegeben werden!");
+         alert("<?php printf(__('Bei \"%s\" muss eine Zahl eingegeben werden!'), __('Anzahl Monate'));?>");
          document.frm_options.number_month.focus();
          return false;
        }
        if (document.frm_options.number_month.value < 1 ||
          document.frm_options.number_month.value > 100) {
-         alert("Bitte eine Zahl zwischen 1-100 eingeben!");
+         alert("<?php _e('Bitte eine Zahl zwischen 1-100 eingeben!');?>");
          document.frm_options.number_month.focus();
          return false;
        } /*

@@ -397,9 +397,11 @@ class occupancy_plan_Output
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
             $ausgabe .= '&copy; 2009 by Peter Welz [<a href="http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/"'.
-			            ' target="_blank">Occupancy plan</a>]&nbsp;&nbsp;'.
-						'<a href="http://www.ferienstrandwohnung.de" target="_blank">Ferien an der Ostsee</a>&nbsp;&nbsp;'.
-			            '<a href="http://www.ostsee-fewo-nienhagen.de" target="_blank">Ostsee Ferienwohnung Villa Erika</a>'."\n";
+			            ' target="_blank" title="Belegungs- / occupancyplan" alt="Wordpress plugin Belegungsplan">Occupancy plan</a>]&nbsp;&nbsp;'.
+						'<a href="http://www.ferienstrandwohnung.de" target="_blank" title="Ferien an der Ostsee" '.
+                  'alt="ostssee ferienstrandwohnung ostseebadnienhagen">Ferienhaus</a>&nbsp;&nbsp;'.
+			            '<a href="http://www.ostsee-villa-erika.de" target="_blank" title="ferienwohnung ostsee villa erika"'.
+                     ' alt="ostssee ferienwohnung villa erika ostseebadnienhagen">Ostsee Villa</a>'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '            </tr>'."\n";	
             $ausgabe .= '          </table>'."\n";
