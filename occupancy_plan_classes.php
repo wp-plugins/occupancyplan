@@ -1,39 +1,39 @@
 <?php
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
-define('chgname', htmlentities(__("Name ändern")));
-define('c_color_def', htmlentities(__("Textfarbe Standard")));
-define('c_color_tabborder', htmlentities(__("Rahmenfarbe")));
-define('c_color_tabinner', htmlentities(__("Hintergrundfarbe Tage Standard")));
-define('c_color_tabinnerDays', htmlentities(__("Tabellenfarbe Wochentage")));
-define('c_color_tabhead', htmlentities(__("Tabellenfarbe Kopf")));
-define('c_color_holiday', htmlentities(__("Textfarbe Feiertag")));
-define('c_color_today', htmlentities(__("Textfarbe Aktueller Tag")));
-define('c_color_nildays', htmlentities(__("Hintergrundfarbe leere Tage")));
-define('c_color_assigned', htmlentities(__("Hintergrundfarbe belegte Tage")));
-define('c_main_with', htmlentities(__("Breite der Anzeige in Pixel")));
-define('c_heading', htmlentities(__("Anzeigentext")));
-define('c_number_month', htmlentities(__("Anzahl Monate die angezeigt werden")));
+define('chgname', htmlentities(__("Name ändern", 'occupancyplan')));
+define('c_color_def', htmlentities(__("Textfarbe Standard", 'occupancyplan')));
+define('c_color_tabborder', htmlentities(__("Rahmenfarbe", 'occupancyplan')));
+define('c_color_tabinner', htmlentities(__("Hintergrundfarbe Tage Standard", 'occupancyplan')));
+define('c_color_tabinnerDays', htmlentities(__("Tabellenfarbe Wochentage", 'occupancyplan')));
+define('c_color_tabhead', htmlentities(__("Tabellenfarbe Kopf", 'occupancyplan')));
+define('c_color_holiday', htmlentities(__("Textfarbe Feiertag", 'occupancyplan')));
+define('c_color_today', htmlentities(__("Textfarbe Aktueller Tag", 'occupancyplan')));
+define('c_color_nildays', htmlentities(__("Hintergrundfarbe leere Tage", 'occupancyplan')));
+define('c_color_assigned', htmlentities(__("Hintergrundfarbe belegte Tage", 'occupancyplan')));
+define('c_main_with', htmlentities(__("Breite der Anzeige in Pixel", 'occupancyplan')));
+define('c_heading', htmlentities(__("Anzeigentext", 'occupancyplan')));
+define('c_number_month', htmlentities(__("Anzahl Monate die angezeigt werden", 'occupancyplan')));
 
-define('c_month_01', htmlentities(__("Januar")));
-define('c_month_02', htmlentities(__("Februar")));
-define('c_month_03', htmlentities(__("März")));
-define('c_month_04', htmlentities(__("April")));
-define('c_month_05', htmlentities(__("Mai")));
-define('c_month_06', htmlentities(__("Juni")));
-define('c_month_07', htmlentities(__("Juli")));
-define('c_month_08', htmlentities(__("August")));
-define('c_month_09', htmlentities(__("September")));
-define('c_month_10', htmlentities(__("Oktober")));
-define('c_month_11', htmlentities(__("November")));
-define('c_month_12', htmlentities(__("Dezember")));
-define('c_day1', htmlentities(__("Mo")));
-define('c_day2', htmlentities(__("Di")));
-define('c_day3', htmlentities(__("Mi")));
-define('c_day4', htmlentities(__("Do")));
-define('c_day5', htmlentities(__("Fr")));
-define('c_day6', htmlentities(__("Sa")));
-define('c_day7', htmlentities(__("So")));
+define('c_month_01', htmlentities(__("Januar", 'occupancyplan')));
+define('c_month_02', htmlentities(__("Februar", 'occupancyplan')));
+define('c_month_03', htmlentities(__("März", 'occupancyplan')));
+define('c_month_04', htmlentities(__("April", 'occupancyplan')));
+define('c_month_05', htmlentities(__("Mai", 'occupancyplan')));
+define('c_month_06', htmlentities(__("Juni", 'occupancyplan')));
+define('c_month_07', htmlentities(__("Juli", 'occupancyplan')));
+define('c_month_08', htmlentities(__("August", 'occupancyplan')));
+define('c_month_09', htmlentities(__("September", 'occupancyplan')));
+define('c_month_10', htmlentities(__("Oktober", 'occupancyplan')));
+define('c_month_11', htmlentities(__("November", 'occupancyplan')));
+define('c_month_12', htmlentities(__("Dezember", 'occupancyplan')));
+define('c_day1', htmlentities(__("Mo", 'occupancyplan')));
+define('c_day2', htmlentities(__("Di", 'occupancyplan')));
+define('c_day3', htmlentities(__("Mi", 'occupancyplan')));
+define('c_day4', htmlentities(__("Do", 'occupancyplan')));
+define('c_day5', htmlentities(__("Fr", 'occupancyplan')));
+define('c_day6', htmlentities(__("Sa", 'occupancyplan')));
+define('c_day7', htmlentities(__("So", 'occupancyplan')));
 
 
 class occupancy_plan_Settings
@@ -125,7 +125,7 @@ class occupancy_plan_Settings
             if (array_key_exists($daten->bc_name, $this->values)) {
                $this->values[$daten->bc_name] = $daten->bc_wert;
             } else {
-               exit('<p>'.htmlentities(sprintf(__('%s existiert nicht. Bitte prüfe deine Datenbank.'),$daten->bc_name)).'</p>');
+               exit('<p>'.htmlentities(sprintf(__('%s existiert nicht. Bitte prüfe deine Datenbank.', 'occupancyplan'),$daten->bc_name)).'</p>');
             }
          }
       }
@@ -146,7 +146,7 @@ class occupancy_plan_Settings
          if (array_key_exists($indexname, $this->desc)) {
             return $this->desc[$indexname];
          } else {
-            exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.'),$indexname)).'</p>');
+            exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.', 'occupancyplan'),$indexname)).'</p>');
          }
       }
       // default properties
@@ -158,7 +158,7 @@ class occupancy_plan_Settings
       } elseif (array_key_exists($indexname, $this->values)) {
          return $this->values[$indexname];
       } else {
-         exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.'),$indexname)).'</p>');
+         exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.', 'occupancyplan'),$indexname)).'</p>');
       }
    }
 }
@@ -210,8 +210,8 @@ class occupancy_plan_Output
          $settings = new occupancy_plan_Settings($this->occupancy_Plan_ID);
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<div class="updated"><strong><p>'."\n";
-            $ausgabe .= __('Wenn ihr eine Spende in H&ouml;he von 15,00 EUR gebt, bekommt ihr einen Link zum download des Plugins ohne')."</p><p>\n";
-            $ausgabe .= __('den Copyright Vermerk. Ausserdem wird diese Spendenbitte im Admin-Interface nicht mehr angezeigt.')."</p></strong>\n";
+            $ausgabe .= __('Wenn ihr eine Spende in H&ouml;he von 15,00 EUR gebt, bekommt ihr einen Link zum download des Plugins ohne', 'occupancyplan')."</p><p>\n";
+            $ausgabe .= __('den Copyright Vermerk. Ausserdem wird diese Spendenbitte im Admin-Interface nicht mehr angezeigt.', 'occupancyplan')."</p></strong>\n";
             $ausgabe .= '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">'."\n";
             $ausgabe .= '<input type="hidden" name="cmd" value="_s-xclick" />'."\n";
             $ausgabe .= '<input type="hidden" name="hosted_button_id" value="4217138" />'."\n";
@@ -220,7 +220,7 @@ class occupancy_plan_Output
             $ausgabe .= '</form>'."\n";
             $ausgabe .= '</div>'."\n";
             
-            $ausgabe .= '<p><strong>'.htmlentities(__('Zum anzeigen der Übersicht folgenden Text in die Seite einfügen:')).'</strong>';
+            $ausgabe .= '<p><strong>'.htmlentities(__('Zum anzeigen der Übersicht folgenden Text in die Seite einfügen:', 'occupancyplan')).'</strong>';
             $ausgabe .= htmlentities(' <!-- belegungsplan '.$this->occupancy_Plan_ID.' -->').'</p>'."\n";
             $listbox = "\t".'<select name="occupancy_plan_id" style="width: 80%;">'."\n";
             $sql = "select bo_description, bo_objekt_id from ".$wpdb->prefix."belegung_objekte;";
@@ -239,11 +239,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine andere Übersicht auswählen:')).'</td>';
+                        htmlentities(__('Eine andere Übersicht auswählen:', 'occupancyplan')).'</td>';
             $ausgabe .= '      <td>'.$listbox.'</td>';
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Wählen')).'" />';
+                        htmlentities(__('Wählen', 'occupancyplan')).'" />';
             $ausgabe .= '      </td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>";
@@ -254,11 +254,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine Übersicht löschen:')).'</td>';
+                        htmlentities(__('Eine Übersicht löschen:', 'occupancyplan')).'</td>';
             $ausgabe .= '      <td>'.$listbox."</td>";
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="objectdelete" class="button-primary" value="'.
-                        htmlentities(__('Löschen')).'" /></td>'."\n";
+                        htmlentities(__('Löschen', 'occupancyplan')).'" /></td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= $error_str;   
             $ausgabe .= "</table>";
@@ -270,10 +270,10 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";    
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine neue Übersicht hinzufügen:')).'</td>'."\n";
+                        htmlentities(__('Eine neue Übersicht hinzufügen:', 'occupancyplan')).'</td>'."\n";
             $ausgabe .= '      <td><input type="text" style="width: 80%" maxlength="50" name="occupancy_plan_name" value=""></td>'."\n";
             $ausgabe .= '      <td style="width: 20%;"><input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Hinzufügen')).'" />'."\n";
+                        htmlentities(__('Hinzufügen', 'occupancyplan')).'" />'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>\n";
             $ausgabe .= '<input name="occupancy_plan_action" value="add_occupancy_plan" type="hidden" />'."\n";
@@ -285,17 +285,17 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Name der Übersicht ändern:')).'</td>'."\n";
+                        htmlentities(__('Name der Übersicht ändern:', 'occupancyplan')).'</td>'."\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="70px" maxlength="50" name="occupancy_plan_name" value="'.$description.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Überschrift:'))."</td>\n";
+                        htmlentities(__('Überschrift:', 'occupancyplan'))."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="80%" maxlength="250" name="heading" value="'.$settings->heading.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Anzahl Monate:'))."</td>\n";
+                        htmlentities(__('Anzahl Monate:', 'occupancyplan'))."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="7" maxlength="2" name="number_month" value="'.$settings->number_month.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             foreach ($settings->default_values as $key => $value) {
@@ -332,7 +332,7 @@ class occupancy_plan_Output
             }
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="text-align:right;" colspan="4"><input type="submit" name="setsettings" class="button-primary" value="'.
-                         htmlentities(__('Aktualisieren')).'" /></td>'."\n";
+                         htmlentities(__('Aktualisieren', 'occupancyplan')).'" /></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "</table>";
             $ausgabe .= "</form>\n";
@@ -411,7 +411,7 @@ class occupancy_plan_Output
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
             $ausgabe .= '                <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Aktualisieren')).'" />'."\n";
+                        htmlentities(__('Aktualisieren', 'occupancyplan')).'" />'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '          </table>'."\n";         
             $ausgabe .= '          </td></tr>'."\n";
@@ -506,11 +506,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '; color: '.$settings->color_today.';" title="'.
-                            htmlentities(__('belegt')).
+                            htmlentities(__('belegt', 'occupancyplan')).
                             '">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.';" title="'.
-                            htmlentities(__('belegt')).'">'.$i.'</td>'."\n";
+                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i.'</td>'."\n";
             }
          }
          if ($this->IsAdmin === TRUE) {
@@ -531,7 +531,7 @@ class occupancy_plan_Output
                           $jahr_.'-'.$mon_.'-'.$i.'" /></td>'."\n";
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.
-                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('heute')).'">'.$i.'</td>'."\n";
+                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('heute', 'occupancyplan')).'">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.';">'.$i."</td>\n";
             }
@@ -543,11 +543,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.'; color: '.
                             $settings->color_today.';" title="'.
-                            htmlentities(__('belegt')).'">'.$i."</td>\n";
+                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i."</td>\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '" title="'.
-                            htmlentities(__('belegt')).'">'.$i."</td>\n";
+                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i."</td>\n";
             }
          }
          $y++;
