@@ -3,7 +3,7 @@
 Plugin Name: occupancyplan
 Plugin URI: http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
 Description: occupancy plan for Wordpress
-Version: 1.0.1.0
+Version: 1.0.1.1
 Author: Peter Welz
 Author URI: http://www.gods4u.de/
 Text Domain: occupancyplan
@@ -17,7 +17,7 @@ register_activation_hook(__FILE__, 'occupancy_plan_install');
 
 function occupancy_plan_install() {
     global $wpdb;
-    $occupancy_plan_version = "1.0.1.0";
+    $occupancy_plan_version = "1.0.1.1";
 
     $table_name_daten   = $wpdb->prefix . "belegung_daten";
     $table_name_objekte = $wpdb->prefix . "belegung_objekte";   
