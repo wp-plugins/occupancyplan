@@ -1,22 +1,23 @@
 <?php
 /*
 Plugin Name: occupancyplan
-Plugin URI: http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/
+Plugin URI: http://www.gods4u.de/wp-plugin-occupancyplan/
 Description: occupancy plan for Wordpress
-Version: 1.0.0.0
+Version: 1.0.2.0
 Author: Peter Welz
 Author URI: http://www.gods4u.de/
+Text Domain: occupancyplan
 */
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 $plugin_dir = basename(dirname(__FILE__));
-load_plugin_textdomain('Belegungsplan', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
+load_plugin_textdomain('occupancyplan', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
    
 register_activation_hook(__FILE__, 'occupancy_plan_install');
 
 function occupancy_plan_install() {
     global $wpdb;
-    $occupancy_plan_version = "1.0.0.0";
+    $occupancy_plan_version = "1.0.2.0";
 
     $table_name_daten   = $wpdb->prefix . "belegung_daten";
     $table_name_objekte = $wpdb->prefix . "belegung_objekte";   
@@ -95,6 +96,7 @@ table.occupancy_kalender td {
 }
 
 function add_adm_css() {
+   global $wpdb;
 ?>
 <script language="Javascript">
      var ie = false;
@@ -120,7 +122,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("Bitte eine Zahl zwischen 1-100 eingeben!");
+         alert("<? _e('Bitte eine Zahl zwischen 1-100 eingeben!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -132,13 +134,13 @@ function add_adm_css() {
          }
        }
        if (chkZ == -1) {
-         alert("Bei \"Anzahl Monate\" muss eine Zahl eingegeben werden!");
+         alert("<?php printf(__('Bei \"%s\" muss eine Zahl eingegeben werden!', 'occupancyplan'), __('Anzahl Monate', 'occupancyplan'));?>");
          document.frm_options.number_month.focus();
          return false;
        }
        if (document.frm_options.number_month.value < 1 ||
          document.frm_options.number_month.value > 100) {
-         alert("Bitte eine Zahl zwischen 1-100 eingeben!");
+         alert("<?php _e('Bitte eine Zahl zwischen 1-100 eingeben!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        } /*
@@ -190,7 +192,7 @@ add_filter('the_content', 'occupancy_plan_check_output');
 function occupancy_plan_check_output($content) {
    $text = '<!-- belegungsplan ';
    $pos = strpos($content, $text);
-   if ($pos !== FALSE) {
+   while ($pos !== FALSE) {
       $tmptext = substr($content, $pos-1);
       $pos = strpos($tmptext, ' -->');
       if ($pos !== FALSE) {
@@ -201,6 +203,7 @@ function occupancy_plan_check_output($content) {
              $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid), $content);
          }
       }
+      $pos = strpos($content, $text);
    }
    return $content;
 }
@@ -208,7 +211,7 @@ function occupancy_plan_check_output($content) {
 add_action('admin_menu', 'occupancy_plan_add_menu');
 // anhanced adminmenu options
 function occupancy_plan_add_menu() {
-   add_options_page(__('Belegungsplan-Plugin'), __('Belegungsplan'), 'publish_posts', __FILE__, 'occupancy_plan_option_page'); //optionenseite hinzufügen
+   add_options_page(__('Belegungsplan-Plugin', 'occupancyplan'), __('Belegungsplan', 'occupancyplan'), 'publish_posts', __FILE__, 'occupancy_plan_option_page'); //optionenseite hinzufügen
 }
 
 // only calls if comes from adminpagelink
@@ -234,11 +237,11 @@ function occupancy_plan_option_page() {
          $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id);
        if (isset($occupancy_plan_name)) {
             $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__("Die Änderungen an [%s] wurden übernommen!"), $occupancy_plan_name)).
+                    htmlentities(sprintf(__("Die Änderungen an [%s] wurden übernommen!", 'occupancyplan'), $occupancy_plan_name)).
                   '</strong></p></div>'."\n";
        } else {
             $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(__('Die Änderungen wurden übernommen!')).'</strong></p></div>'."\n";       
+                     htmlentities(__('Die Änderungen wurden übernommen!', 'occupancyplan')).'</strong></p></div>'."\n";       
        }
       } elseif ($action == 'change_occupancy_plan') {
          //
@@ -256,14 +259,14 @@ function occupancy_plan_option_page() {
          if (isset($occupancy_plan_id)) {
             update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
            $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(sprintf(__('Optionen von [%s] erfolgreich gespeichert!'),$occupancy_plan_name)).
+                     htmlentities(sprintf(__('Optionen von [%s] erfolgreich gespeichert!', 'occupancyplan'),$occupancy_plan_name)).
                   '</strong></p></div>'."\n";
          }
       } elseif ($action == 'add_occupancy_plan') {
          $occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
          if ($occupancy_plan_id == -1){
             $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__('Ein Objekt mit dem Namen [%s] existiert bereits!'),$occupancy_plan_name)).
+                    htmlentities(sprintf(__('Ein Objekt mit dem Namen [%s] existiert bereits!', 'occupancyplan'),$occupancy_plan_name)).
                   '</strong></p></div>'."\n";
           $occupancy_plan_id = 1;
          }
@@ -274,19 +277,19 @@ function occupancy_plan_option_page() {
           include_once('occupancy_plan_classes.php');
            $tmp = new occupancy_plan_Settings($occupancy_plan_id);
            $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__('Das erste Objekt [%s] kann nicht gelöscht werden!'),$tmp->occupancy_plan_name)).
+                    htmlentities(sprintf(__('Das erste Objekt [%s] kann nicht gelöscht werden!', 'occupancyplan'),$tmp->occupancy_plan_name)).
                   '</strong></p></div>'."\n";
        
          } else {
             $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(sprintf(__('Das Objekt [%s] wurde gelöscht!'),$occupancy_plan_name)).
+                     htmlentities(sprintf(__('Das Objekt [%s] wurde gelöscht!', 'occupancyplan'),$occupancy_plan_name)).
                   '</strong></p></div>'."\n";     
         }
       }  
    }
 ?>
   <div class="wrap">
-      <h2><? _e('Belegungsplan');?></h2>
+      <h2><? _e('Belegungsplan', 'occupancyplan');?></h2>
 <?
    if (isset($dbg_str)) {
       echo $dbg_str;
