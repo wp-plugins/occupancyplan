@@ -1,0 +1,34 @@
+<style type="text/css">
+
+table.occupancy_aussen {
+    border-width: 0px 0px 0px 0px;
+    border-spacing: 1px;
+    border-style: none none none none;
+    border-color: #000000 #000000 #000000 #000000;
+    border-collapse: separate;
+    width: 100%;
+    text-align: center;
+}
+		    
+table.occupancy_kalender {
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 1px;
+    border-style: solid solid solid solid;
+    border-collapse: separate;
+    width: 33%;
+}
+						
+table.occupancy_kalender th {
+    height: 10px;
+}
+						    
+table.occupancy_kalender td {
+    text-align: center;
+    height: 40px;
+    width: 15px;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: arial,helvetica,sans-serif;
+}
+
+</style>
