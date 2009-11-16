@@ -7,76 +7,76 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
-"POT-Creation-Date: 2009-05-17 14:32+0000\n"
+"POT-Creation-Date: 2009-11-16 11:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: occupancy_plan_classes.php:4
-msgid "Name ndern"
+msgid "Change Name"
 msgstr ""
 
 #: occupancy_plan_classes.php:5
-msgid "Textfarbe Standard"
+msgid "Textcolor default"
 msgstr ""
 
 #: occupancy_plan_classes.php:6
-msgid "Rahmenfarbe"
+msgid "Bordercolor"
 msgstr ""
 
 #: occupancy_plan_classes.php:7
-msgid "Hintergrundfarbe Tage Standard"
+msgid "Backgroundcolor days default"
 msgstr ""
 
 #: occupancy_plan_classes.php:8
-msgid "Tabellenfarbe Wochentage"
+msgid "Tablecolor days of week"
 msgstr ""
 
 #: occupancy_plan_classes.php:9
-msgid "Tabellenfarbe Kopf"
+msgid "Tablecolor Header"
 msgstr ""
 
 #: occupancy_plan_classes.php:10
-msgid "Textfarbe Feiertag"
+msgid "Textcolor Holiday"
 msgstr ""
 
 #: occupancy_plan_classes.php:11
-msgid "Textfarbe Aktueller Tag"
+msgid "Textcolor current day"
 msgstr ""
 
 #: occupancy_plan_classes.php:12
-msgid "Hintergrundfarbe leere Tage"
+msgid "Backgroundcolor empty days"
 msgstr ""
 
 #: occupancy_plan_classes.php:13
-msgid "Hintergrundfarbe belegte Tage"
+msgid "Backgroundcolor occupied days"
 msgstr ""
 
 #: occupancy_plan_classes.php:14
-msgid "Breite der Anzeige in Pixel"
+msgid "Viewwidth in pixel"
 msgstr ""
 
 #: occupancy_plan_classes.php:15
-msgid "Anzeigentext"
+msgid "Viewtext"
 msgstr ""
 
 #: occupancy_plan_classes.php:16
-msgid "Anzahl Monate die angezeigt werden"
+msgid "Count of month to view"
 msgstr ""
 
 #: occupancy_plan_classes.php:18
-msgid "Januar"
+msgid "January"
 msgstr ""
 
 #: occupancy_plan_classes.php:19
-msgid "Februar"
+msgid "February"
 msgstr ""
 
 #: occupancy_plan_classes.php:20
-msgid "Mrz"
+msgid "March"
 msgstr ""
 
 #: occupancy_plan_classes.php:21
@@ -84,15 +84,15 @@ msgid "April"
 msgstr ""
 
 #: occupancy_plan_classes.php:22
-msgid "Mai"
+msgid "May"
 msgstr ""
 
 #: occupancy_plan_classes.php:23
-msgid "Juni"
+msgid "June"
 msgstr ""
 
 #: occupancy_plan_classes.php:24
-msgid "Juli"
+msgid "July"
 msgstr ""
 
 #: occupancy_plan_classes.php:25
@@ -104,7 +104,7 @@ msgid "September"
 msgstr ""
 
 #: occupancy_plan_classes.php:27
-msgid "Oktober"
+msgid "October"
 msgstr ""
 
 #: occupancy_plan_classes.php:28
@@ -112,158 +112,177 @@ msgid "November"
 msgstr ""
 
 #: occupancy_plan_classes.php:29
-msgid "Dezember"
+msgid "December"
 msgstr ""
 
 #: occupancy_plan_classes.php:30
-msgid "Mo"
+msgid "Mon"
 msgstr ""
 
 #: occupancy_plan_classes.php:31
-msgid "Di"
+msgid "Tue"
 msgstr ""
 
 #: occupancy_plan_classes.php:32
-msgid "Mi"
+msgid "Wed"
 msgstr ""
 
 #: occupancy_plan_classes.php:33
-msgid "Do"
+msgid "Thu"
 msgstr ""
 
 #: occupancy_plan_classes.php:34
-msgid "Fr"
+msgid "Fri"
 msgstr ""
 
 #: occupancy_plan_classes.php:35
-msgid "Sa"
+msgid "Sat"
 msgstr ""
 
 #: occupancy_plan_classes.php:36
-msgid "So"
+msgid "Sun"
 msgstr ""
 
 #: occupancy_plan_classes.php:128
 #, php-format
-msgid "%s existiert nicht. Bitte prfe deine Datenbank."
+msgid "%s not exists. please check your database."
 msgstr ""
 
 #: occupancy_plan_classes.php:149 occupancy_plan_classes.php:161
 #, php-format
-msgid "%s existiert nicht."
+msgid "%s not exists."
 msgstr ""
 
 #: occupancy_plan_classes.php:213
+#, php-format
 msgid ""
-"Wenn ihr eine Spende in H&ouml;he von 15,00 EUR gebt, bekommt ihr einen Link "
-"zum download des Plugins ohne"
+"There is the possibility of acquiring an additional license (cost: 15.00 "
+"EUR). With the acquisition of an additional license is granted%s"
 msgstr ""
 
-#: occupancy_plan_classes.php:214
+#: occupancy_plan_classes.php:222
+#, php-format
 msgid ""
-"den Copyright Vermerk. Ausserdem wird diese Spendenbitte im Admin-Interface "
-"nicht mehr angezeigt."
+"Should the reference to %s will also be removed, you need to buy an extended "
+"additional license (cost: 20.00 EUR)."
 msgstr ""
 
-#: occupancy_plan_classes.php:223
-msgid "Zum anzeigen der bersicht folgenden Text in die Seite einfgen:"
+#: occupancy_plan_classes.php:225
+msgid "Thus the plug is then completely free of advertising."
 msgstr ""
 
-#: occupancy_plan_classes.php:242
-msgid "Eine andere bersicht auswhlen:"
+#: occupancy_plan_classes.php:227
+msgid "Invoices are issued for both licenses. VAT will not be shown here."
 msgstr ""
 
-#: occupancy_plan_classes.php:246
-msgid "Whlen"
-msgstr ""
-
-#: occupancy_plan_classes.php:257
-msgid "Eine bersicht lschen:"
-msgstr ""
-
-#: occupancy_plan_classes.php:261
-msgid "Lschen"
-msgstr ""
-
-#: occupancy_plan_classes.php:273
-msgid "Eine neue bersicht hinzufgen:"
-msgstr ""
-
-#: occupancy_plan_classes.php:276
-msgid "Hinzufgen"
-msgstr ""
-
-#: occupancy_plan_classes.php:288
-msgid "Name der bersicht ndern:"
-msgstr ""
-
-#: occupancy_plan_classes.php:293
-msgid "berschrift:"
-msgstr ""
-
-#: occupancy_plan_classes.php:298
-msgid "Anzahl Monate:"
-msgstr ""
-
-#: occupancy_plan_classes.php:335 occupancy_plan_classes.php:414
-msgid "Aktualisieren"
-msgstr ""
-
-#: occupancy_plan_classes.php:509 occupancy_plan_classes.php:513
-#: occupancy_plan_classes.php:546 occupancy_plan_classes.php:550
-msgid "belegt"
-msgstr ""
-
-#: occupancy_plan_classes.php:534
-msgid "heute"
-msgstr ""
-
-#: occupancy_plan_options.php:124 occupancy_plan_options.php:142
-msgid "Bitte eine Zahl zwischen 1-100 eingeben!"
-msgstr ""
-
-#: occupancy_plan_options.php:136
+#: occupancy_plan_classes.php:231
 #, php-format
-msgid "Bei \\\"%s\\\" muss eine Zahl eingegeben werden!"
+msgid "To purchase any of these additional licenses, register via email. (%s)"
 msgstr ""
 
-#: occupancy_plan_options.php:136
-msgid "Anzahl Monate"
+#: occupancy_plan_classes.php:237
+msgid "To view the Overview, insert following text to page:"
 msgstr ""
 
-#: occupancy_plan_options.php:212
-msgid "Belegungsplan-Plugin"
+#: occupancy_plan_classes.php:256
+msgid "Select Overview"
 msgstr ""
 
-#: occupancy_plan_options.php:212 occupancy_plan_options.php:290
-msgid "Belegungsplan"
+#: occupancy_plan_classes.php:260
+msgid "Select"
 msgstr ""
 
-#: occupancy_plan_options.php:238
+#: occupancy_plan_classes.php:271
+msgid "delete Overview:"
+msgstr ""
+
+#: occupancy_plan_classes.php:275
+msgid "delete"
+msgstr ""
+
+#: occupancy_plan_classes.php:287
+msgid "Add new Overview:"
+msgstr ""
+
+#: occupancy_plan_classes.php:290
+msgid "Add"
+msgstr ""
+
+#: occupancy_plan_classes.php:302
+msgid "Change Overviewname:"
+msgstr ""
+
+#: occupancy_plan_classes.php:307
+msgid "Headline"
+msgstr ""
+
+#: occupancy_plan_classes.php:312
+msgid "Count of month:"
+msgstr ""
+
+#: occupancy_plan_classes.php:351 occupancy_plan_classes.php:442
+msgid "refresh"
+msgstr ""
+
+#: occupancy_plan_classes.php:564 occupancy_plan_classes.php:568
+#: occupancy_plan_classes.php:601 occupancy_plan_classes.php:605
+msgid "busy"
+msgstr ""
+
+#: occupancy_plan_classes.php:589
+msgid "today"
+msgstr ""
+
+#: occupancy_plan_options.php:98
+msgid "Please enter a Number between 1-100!"
+msgstr ""
+
+#: occupancy_plan_options.php:110
 #, php-format
-msgid "Die nderungen an [%s] wurden bernommen!"
+msgid "\\\"%s\\\" must be entered a number!"
 msgstr ""
 
-#: occupancy_plan_options.php:242
-msgid "Die nderungen wurden bernommen!"
+#: occupancy_plan_options.php:110
+msgid "count of month"
 msgstr ""
 
-#: occupancy_plan_options.php:260
+#: occupancy_plan_options.php:116
+msgid "Please enter a Number between 1-100"
+msgstr ""
+
+#: occupancy_plan_options.php:220
+msgid "Occupancyplan-Plugin"
+msgstr ""
+
+#: occupancy_plan_options.php:220 occupancy_plan_options.php:369
+msgid "Occupancyplan"
+msgstr ""
+
+#: occupancy_plan_options.php:316
 #, php-format
-msgid "Optionen von [%s] erfolgreich gespeichert!"
+msgid "The Changes to [%s] has been adopted!"
 msgstr ""
 
-#: occupancy_plan_options.php:267
-#, php-format
-msgid "Ein Objekt mit dem Namen [%s] existiert bereits!"
+#: occupancy_plan_options.php:320
+msgid "The Changes has been adopted!"
 msgstr ""
 
-#: occupancy_plan_options.php:278
+#: occupancy_plan_options.php:338
 #, php-format
-msgid "Das erste Objekt [%s] kann nicht gelscht werden!"
+msgid "Options [%s] successfully saved!"
 msgstr ""
 
-#: occupancy_plan_options.php:283
+#: occupancy_plan_options.php:345
 #, php-format
-msgid "Das Objekt [%s] wurde gelscht!"
+msgid "A Object with Name [%s] already exists!"
+msgstr ""
+
+#: occupancy_plan_options.php:356
+#, php-format
+msgid "The first Object [%s] can not be deleted!"
+msgstr ""
+
+#: occupancy_plan_options.php:361
+#, php-format
+msgid "The Object [%s] successfully deleted!"
 msgstr ""
