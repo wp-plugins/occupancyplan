@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Welz, Peter <p.welz@directonline.de>\n"
 "Language-Team:  <wordpress@gods4u.de>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #: occupancy_plan_classes.php:4
 msgid "Change Name"
-msgstr "Name Ã¤ndern"
+msgstr "Name ändern"
 
 #: occupancy_plan_classes.php:5
 msgid "Textcolor default"
@@ -75,7 +75,7 @@ msgstr "Februar"
 
 #: occupancy_plan_classes.php:20
 msgid "March"
-msgstr "MÃ¤rz"
+msgstr "März"
 
 #: occupancy_plan_classes.php:21
 msgid "April"
@@ -144,7 +144,7 @@ msgstr "So"
 #: occupancy_plan_classes.php:128
 #, php-format
 msgid "%s not exists. please check your database."
-msgstr "%s existiert nicht. Bitte prÃ¼fe deine Datenbank."
+msgstr "%s existiert nicht. Bitte prüfe deine Datenbank."
 
 #: occupancy_plan_classes.php:149
 #: occupancy_plan_classes.php:161
@@ -155,7 +155,7 @@ msgstr "%s existiert nicht."
 #: occupancy_plan_classes.php:213
 #, php-format
 msgid "There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same."
-msgstr "Es gibt die MÃ¶glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht eingerÃ¤umt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s mÃ¼ssen aber erhalten bleiben."
+msgstr "Es gibt die Möglichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht eingeräumt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s müssen aber erhalten bleiben."
 
 #: occupancy_plan_classes.php:219
 #, php-format
@@ -164,11 +164,11 @@ msgstr "Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusat
 
 #: occupancy_plan_classes.php:222
 msgid "Thus the plug is then completely free of advertising."
-msgstr "Damit ist das Plugin dann voellig Werbefrei."
+msgstr "Damit ist das Plugin dann völlig Werbefrei."
 
 #: occupancy_plan_classes.php:224
 msgid "Invoices are issued for both licenses. VAT will not be shown here."
-msgstr "FÃ¼r beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird."
+msgstr "Für beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird."
 
 #: occupancy_plan_classes.php:228
 #, php-format
@@ -177,39 +177,39 @@ msgstr "Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. 
 
 #: occupancy_plan_classes.php:234
 msgid "To view the Overview, insert following text to page:"
-msgstr "Zum anzeigen der Ãœbersicht fÃ¼ge folgenden Text in die Seite ein:"
+msgstr "Zum anzeigen der Übersicht füge folgenden Text in die Seite ein:"
 
 #: occupancy_plan_classes.php:253
 msgid "Select Overview"
-msgstr "Ãœbersicht auswÃ¤hlen"
+msgstr "Übersicht auswählen"
 
 #: occupancy_plan_classes.php:257
 msgid "Select"
-msgstr "AuswÃ¤hlen"
+msgstr "Auswählen"
 
 #: occupancy_plan_classes.php:268
 msgid "delete Overview:"
-msgstr "Ãœbersicht lÃ¶schen:"
+msgstr "Übersicht löschen:"
 
 #: occupancy_plan_classes.php:272
 msgid "delete"
-msgstr "LÃ¶schen"
+msgstr "Löschen"
 
 #: occupancy_plan_classes.php:284
 msgid "Add new Overview:"
-msgstr "Neue Ãœbersicht hinzufÃ¼gen:"
+msgstr "Neue Übersicht hinzufügen:"
 
 #: occupancy_plan_classes.php:287
 msgid "Add"
-msgstr "HinzufÃ¼gen"
+msgstr "Hinzufügen"
 
 #: occupancy_plan_classes.php:299
 msgid "Change Overviewname:"
-msgstr "Name der Ãœbersicht Ã¤ndern:"
+msgstr "Name der Übersicht ändern:"
 
 #: occupancy_plan_classes.php:304
 msgid "Headline"
-msgstr "Ãœberschrift"
+msgstr "Überschrift"
 
 #: occupancy_plan_classes.php:309
 msgid "Count of month:"
@@ -260,11 +260,11 @@ msgstr "Belegungsplan"
 #: occupancy_plan_options.php:316
 #, php-format
 msgid "The Changes to [%s] has been adopted!"
-msgstr "Die Ã„nderungen von [%s] wurden Ã¼bernommen!"
+msgstr "Die Änderungen von [%s] wurden übernommen!"
 
 #: occupancy_plan_options.php:320
 msgid "The Changes has been adopted!"
-msgstr "Die Ã„nderungen wurden Ã¼bernommen!"
+msgstr "Die Änderungen wurden übernommen!"
 
 #: occupancy_plan_options.php:338
 #, php-format
@@ -279,10 +279,10 @@ msgstr "Ein Objekt mit Namen [%s] existiert bereits!"
 #: occupancy_plan_options.php:356
 #, php-format
 msgid "The first Object [%s] can not be deleted!"
-msgstr "Das erste Objekt [%s] kann nicht gelÃ¶scht werden!"
+msgstr "Das erste Objekt [%s] kann nicht gelöscht werden!"
 
 #: occupancy_plan_options.php:361
 #, php-format
 msgid "The Object [%s] successfully deleted!"
-msgstr "Das Objekt [%s] wurde erfolgreich gelÃ¶scht!"
+msgstr "Das Objekt [%s] wurde erfolgreich gelöscht!"
 

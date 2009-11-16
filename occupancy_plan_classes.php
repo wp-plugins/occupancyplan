@@ -210,22 +210,22 @@ class occupancy_plan_Output
          $settings = new occupancy_plan_Settings($this->occupancy_Plan_ID);
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<div class="updated"><strong><p>'."\n";
-            $ausgabe .= sprintf(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan'),
+            $ausgabe .= sprintf(htmlentities(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan')),
             /* 'Es gibt die M&ouml;glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht einger&auml;mt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s muessen aber erhalten bleiben.', 'occupancyplan'), */
 	                        '</p><p>'."\n",
 	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p></strong>\n";
 	    $ausgabe .= '<strong><p>';
 	    /* $ausgabe .= sprintf(__('Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20.00 EUR).', 'occupancyplan'),*/
-	    $ausgabe .= sprintf(__('Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR).', 'occupancyplan'),
+	    $ausgabe .= sprintf(htmlentities(__('Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR).', 'occupancyplan')),
 	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p><p>\n";
 	    /* $ausgabe .= __('Damit ist das Plugin dann voellig Werbefrei.', 'occupancyplan')."</p><p>\n";*/
-	    $ausgabe .= __('Thus the plug is then completely free of advertising.', 'occupancyplan')."</p><p>\n";
+	    $ausgabe .= htmlentities(__('Thus the plug is then completely free of advertising.', 'occupancyplan'))."</p><p>\n";
 	    /* $ausgabe .= __('Fuer beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird.', 'occupancyplan');	    */
-	    $ausgabe .= __('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan');
+	    $ausgabe .= htmlentities(__('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan'));
 	    $ausgabe .= '</p></strong>';
 	    $ausgabe .= '<strong><p>';	    
             /* $ausgabe .= sprintf(__('Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)', 'occupancyplan'),*/
-            $ausgabe .= sprintf(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan'),
+            $ausgabe .= sprintf(htmlentities(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan')),
 	                        sprintf('<a href="mailto:wordpress%su.de">wordpress%su.de</a>','@gods4','@gods4'));
 	    $ausgabe .= '</p></strong>';
             $ausgabe .= '</div>'."\n";
