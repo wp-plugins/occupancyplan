@@ -211,9 +211,7 @@ class occupancy_plan_Output
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<div class="updated"><strong><p>'."\n";
             $ausgabe .= sprintf(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan'),
-                                   
-            /* $ausgabe .= sprintf(__('Es gibt die M&ouml;glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht einger&auml;mt,%s'.
-                                   'die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s muessen aber erhalten bleiben.', 'occupancyplan'),*/
+            /* 'Es gibt die M&ouml;glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht einger&auml;mt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s muessen aber erhalten bleiben.', 'occupancyplan'), */
 	                        '</p><p>'."\n",
 	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p></strong>\n";
 	    $ausgabe .= '<strong><p>';
