@@ -38,7 +38,18 @@ AddHandler x-mapp-php5 .php`
 
 = Was muss ich in meine Seite/Artikel einfügen, damit der Belegungsplan erscheint? =
 Ihr müsst die Seite/Artikel in der HTML-Ansicht (NICHT Grafisch) zum bearbeiten öffnen und den folgenden Text eintragen:
-   <!-- belegungsplan 1 --> Dabei steht die Zahl für den Belegungsplan, der angezeigt werden soll.
+   &lt;!-- belegungsplan 1 --&gt; Dabei steht die Zahl für den Belegungsplan, der angezeigt werden soll.
    
 = Ich habe das Plugin installiert, doch es funktioniert nicht, bzw. es wird nichts angezeigt. =
 Bitte stellt sicher, dass auf eurem Server PHP ab Version 5 läuft.
+
+== Changelog ==
+-   1.0.0.0
+   <p>Korrekturen an der readme.txt (Links korrigiert); Screenshot hinzugefuegt</p>
+   <p>Korrekturen an der readme.txt (FAQ); Links korrigiert</p>
+-   1.0.1.0
+   <p>Plugin URI geändert</p>
+   <p>BUGFIX occupancy_plan_options.php - Wenn mehr als ein Plan pro Seite angezeigt werden sollte, hat dies incht funktioniert</p>
+-   1.0.2.0
+   <p>BUGFIXes</p>
+   <p></p>
