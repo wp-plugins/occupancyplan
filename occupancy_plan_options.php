@@ -64,35 +64,8 @@ add_action('wp_head', 'add_css');
 add_action('admin_head', 'add_adm_css');
 
 function add_css() {
-?>
-<style type="text/css">
-table.occupancy_aussen {
-    border-width: 0px 0px 0px 0px;
-    border-spacing: 5px;
-    border-style: none none none none;
-    border-color: #000000 #000000 #000000 #000000;
-    border-collapse: separate;
-    text-align: center;
-}
-
-table.occupancy_kalender {
-    border-width: 1px 1px 1px 1px;
-    border-spacing: 1px;
-    border-style: solid solid solid solid;
-    border-collapse: separate;
-    width: 100%;
-    font-weight: normal;
-    font-size: 10px;
-    font-family: arial,helvetica,sans-serif;
-}
-
-table.occupancy_kalender td {
-    text-align: center;
-    height: 10px;
-    width: 14%;
-}
-</style>
-<?
+   $url = get_bloginfo('wpurl');
+   echo '<link rel="stylesheet" href="' . $url . '/wp-content/plugins/occupancyplan/occupancy_plan.css" type="text/css" media="screen" />';
 }
 
 function add_adm_css() {
@@ -122,7 +95,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("<? _e('Bitte eine Zahl zwischen 1-100 eingeben!', 'occupancyplan');?>");
+         alert("<? _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -134,62 +107,85 @@ function add_adm_css() {
          }
        }
        if (chkZ == -1) {
-         alert("<?php printf(__('Bei \"%s\" muss eine Zahl eingegeben werden!', 'occupancyplan'), __('Anzahl Monate', 'occupancyplan'));?>");
+         alert("<?php printf(__('\"%s\" must be entered a number!', 'occupancyplan'), __('count of month', 'occupancyplan'));?>");
          document.frm_options.number_month.focus();
          return false;
        }
        if (document.frm_options.number_month.value < 1 ||
          document.frm_options.number_month.value > 100) {
-         alert("<?php _e('Bitte eine Zahl zwischen 1-100 eingeben!', 'occupancyplan');?>");
+         alert("<?php _e('Please enter a Number between 1-100', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        } /*
        if (document.frm_options.number_month.value % 3 !== 0) {
-         alert("Bitte eine Zahl eingeben, die durch 3 teilbar ist!");
+         alert("Enter a number that is divisible by 3!");
          document.frm_options.number_month.focus();
          return false;
        }   */
      }
 </script>
-
-<style type="text/css">
-table.occupancy_aussen {
-    border-width: 0px 0px 0px 0px;
-    border-spacing: 1px;
-    border-style: none none none none;
-    border-color: #000000 #000000 #000000 #000000;
-    border-collapse: separate;
-    width: 100%;
-    text-align: center;
-}
-
-table.occupancy_kalender {
-    border-width: 1px 1px 1px 1px;
-    border-spacing: 1px;
-    border-style: solid solid solid solid;
-    border-collapse: separate;
-    width: 33%;
-}
-
-table.occupancy_kalender th {
-    height: 10px;
-}
-
-table.occupancy_kalender td {
-    text-align: center;
-    height: 40px;
-    width: 15px;
-    font-weight: normal;
-    font-size: 10px;
-    font-family: arial,helvetica,sans-serif;    
-}
-</style>
 <?
+   $url = get_bloginfo('wpurl');
+   echo '<link rel="stylesheet" href="' . $url . '/wp-content/plugins/occupancyplan/occupancy_plan_adm.css" type="text/css" media="screen" />';
 }
 
 add_filter('the_content', 'occupancy_plan_check_output');
 
 function occupancy_plan_check_output($content) {
+   if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
+      if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
+         $new_year = $_POST['time_year'];
+      } else {
+         $new_month = 0;
+      $new_year  = 0;
+      }   
+
+      if ((isset($_POST['time_month'])) && (!empty($_POST['time_month']))) {
+         $new_month = $_POST['time_month'];
+      } else {
+         $new_month = 0;
+         $new_year  = 0;
+      }
+   
+      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+         $new_oid = $_POST['time_oid'];
+      } else {
+         $new_oid = -1;
+      }
+
+      if ($new_month == 0) {
+         $zeit = localtime(time(), 1);
+      } else {
+         $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+      }
+   } elseif ((isset($_POST['next_cal'])) && (!empty($_POST['next_cal']))) {
+      if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
+         $new_year = $_POST['time_year_next'];
+      } else {
+         $new_month = 0;
+      $new_year  = 0;
+      }   
+
+      if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
+         $new_month = $_POST['time_month_next'];
+      } else {
+         $new_month = 0;
+         $new_year  = 0;
+      }
+   } else {
+      $new_month = 0;
+      $new_year = 0;
+   }
+   if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+      $new_oid = $_POST['time_oid'];
+   } else {
+      $new_oid = -1;
+   }
+   if ($new_month == 0) {
+      $zeit = localtime(time(), 1);
+   } else {
+      $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+   }   
    $text = '<!-- belegungsplan ';
    $pos = strpos($content, $text);
    while ($pos !== FALSE) {
@@ -197,10 +193,20 @@ function occupancy_plan_check_output($content) {
       $pos = strpos($tmptext, ' -->');
       if ($pos !== FALSE) {
          $oid = (int)trim(substr($tmptext, strlen($text), $pos - strlen($text)));
-         if (strpos($content, $text.$oid.' -->') !== FALSE) {
-             $content = preg_replace('/<p>\s*<!--(.*)-->\s*<\/p>/i', "<!--$1-->", $content);
-          include_once("occupancy_plan.php");
-             $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid), $content);
+	 if ($oid == $new_oid) {
+            if (strpos($content, $text.$oid.' -->') !== FALSE) {
+                $content = preg_replace('/<p>\s*<!--(.*)-->\s*<\/p>/i', "<!--$1-->", $content);
+                include_once("occupancy_plan.php");
+                $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid, $zeit), $content);
+                $content .= "<!-- $new_month + $new_year -->";
+	    }	 
+	 } else {
+            if (strpos($content, $text.$oid.' -->') !== FALSE) {
+                $content = preg_replace('/<p>\s*<!--(.*)-->\s*<\/p>/i', "<!--$1-->", $content);
+                include_once("occupancy_plan.php");
+                $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid, localtime(time(), 1)), $content);
+                $content .= "<!-- $new_month + $new_year + ".date("d.n.Y", mktime(0,0,0,$new_month - 2, 1, $new_year))."-->";
+	    }
          }
       }
       $pos = strpos($content, $text);
@@ -211,7 +217,7 @@ function occupancy_plan_check_output($content) {
 add_action('admin_menu', 'occupancy_plan_add_menu');
 // anhanced adminmenu options
 function occupancy_plan_add_menu() {
-   add_options_page(__('Belegungsplan-Plugin', 'occupancyplan'), __('Belegungsplan', 'occupancyplan'), 'publish_posts', __FILE__, 'occupancy_plan_option_page'); //optionenseite hinzufügen
+   add_options_page(__('Occupancyplan-Plugin', 'occupancyplan'), __('Occupancyplan', 'occupancyplan'), 'publish_posts', __FILE__, 'occupancy_plan_option_page'); //optionenseite hinzufügen
 }
 
 // only calls if comes from adminpagelink
@@ -219,84 +225,155 @@ function occupancy_plan_option_page() {
    unset($dbg_str);
 
    $occupancy_plan_id = 1;
+
+   if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
+      if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
+         $new_year = $_POST['time_year'];
+      } else {
+         $new_month = 0;
+      $new_year  = 0;
+      }   
+
+      if ((isset($_POST['time_month'])) && (!empty($_POST['time_month']))) {
+         $new_month = $_POST['time_month'];
+      } else {
+         $new_month = 0;
+         $new_year  = 0;
+      }
    
-   if ((isset($_POST['occupancy_plan_day'])) && (!empty($_POST['occupancy_plan_day']))) {
-      $occupancy_plan_days = $_POST['occupancy_plan_day'];
-   }
-   if ((isset($_POST['occupancy_plan_id'])) && (!empty($_POST['occupancy_plan_id']))) {
-      $occupancy_plan_id   = $_POST['occupancy_plan_id'];
-   }
-   if ((isset($_POST['occupancy_plan_name'])) && (!empty($_POST['occupancy_plan_name']))) {
-      $occupancy_plan_name = $_POST['occupancy_plan_name'];  
-   }
-   if ((isset($_POST['occupancy_plan_action'])) && (!empty($_POST['occupancy_plan_action']))) {
-      $action               = $_POST['occupancy_plan_action'];
-   }
-   if ((isset($action)) && (!empty($action))) {
-      if ($action == 'update_occupancy_plan') {
-         $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id);
-       if (isset($occupancy_plan_name)) {
-            $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__("Die Änderungen an [%s] wurden übernommen!", 'occupancyplan'), $occupancy_plan_name)).
-                  '</strong></p></div>'."\n";
-       } else {
-            $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(__('Die Änderungen wurden übernommen!', 'occupancyplan')).'</strong></p></div>'."\n";       
+      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+         $new_oid = $_POST['time_oid'];
+      } else {
+         $new_oid = -1;
+      }
+
+      if ($new_month == 0) {
+         $zeit = localtime(time(), 1);
+      } else {
+         $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+      }
+   } elseif ((isset($_POST['next_cal'])) && (!empty($_POST['next_cal']))) {
+      if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
+         $new_year = $_POST['time_year_next'];
+      } else {
+         $new_month = 0;
+      $new_year  = 0;
+      }   
+
+      if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
+         $new_month = $_POST['time_month_next'];
+      } else {
+         $new_month = 0;
+         $new_year  = 0;
+      }
+
+      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+         $new_oid = $_POST['time_oid'];
+      } else {
+         $new_oid = -1;
+      }
+
+      if ($new_month == 0) {
+        $zeit = localtime(time(), 1);
+      } else {
+        $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+      }         
+   } else {
+      if ((isset($_POST['time_year_norm'])) && (!empty($_POST['time_year_norm']))) {
+         $new_year = $_POST['time_year_norm'];
+      } else {
+         $new_year = 0;
+      }
+      if ((isset($_POST['time_month_norm'])) && (!empty($_POST['time_month_norm']))) {
+         $new_month = $_POST['time_month_norm'];
+      } else {
+         $new_month = 0;
+         $new_year  = 0;
+      }
+      if ($new_month == 0) {
+        $zeit = localtime(time(), 1);
+      } else {
+        $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+      }   
+   
+       if ((isset($_POST['occupancy_plan_day'])) && (!empty($_POST['occupancy_plan_day']))) {
+          $occupancy_plan_days = $_POST['occupancy_plan_day'];
        }
-      } elseif ($action == 'change_occupancy_plan') {
-         //
-      } elseif ($action == 'settings') {
-         $tmpid = -1;
-         include_once('occupancy_plan_classes.php');
-         $tmp = new occupancy_plan_Settings($tmpid);
-         $newSettings      = $tmp->default_values;
-         foreach ($newSettings as $key => $value) {
-            $tmp               = $_POST[$key];
-            if (isset($tmp)) {
-               $newSettings[$key] = $tmp;
+       if ((isset($_POST['occupancy_plan_id'])) && (!empty($_POST['occupancy_plan_id']))) {
+          $occupancy_plan_id   = $_POST['occupancy_plan_id'];
+       }
+       if ((isset($_POST['occupancy_plan_name'])) && (!empty($_POST['occupancy_plan_name']))) {
+          $occupancy_plan_name = $_POST['occupancy_plan_name'];  
+       }
+       if ((isset($_POST['occupancy_plan_action'])) && (!empty($_POST['occupancy_plan_action']))) {
+          $action               = $_POST['occupancy_plan_action'];
+       }
+       if ((isset($action)) && (!empty($action))) {
+          if ($action == 'update_occupancy_plan') {
+             $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id);
+           if (isset($occupancy_plan_name)) {
+                $dbg_str = '<div class="updated"><p><strong>'.
+                        htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name)).
+                      '</strong></p></div>'."\n";
+           } else {
+                $dbg_str = '<div class="updated"><p><strong>'.
+                         htmlentities(__('The Changes has been adopted!', 'occupancyplan')).'</strong></p></div>'."\n";       
+           }
+          } elseif ($action == 'change_occupancy_plan') {
+             //
+          } elseif ($action == 'settings') {
+             $tmpid = -1;
+             include_once('occupancy_plan_classes.php');
+             $tmp = new occupancy_plan_Settings($tmpid);
+             $newSettings      = $tmp->default_values;
+             foreach ($newSettings as $key => $value) {
+                $tmp               = $_POST[$key];
+                if (isset($tmp)) {
+                   $newSettings[$key] = $tmp;
+                }
+             }
+             if (isset($occupancy_plan_id)) {
+                update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
+               $dbg_str = '<div class="updated"><p><strong>'.
+                         htmlentities(sprintf(__('Options [%s] successfully saved!', 'occupancyplan'),$occupancy_plan_name)).
+                      '</strong></p></div>'."\n";
+             }
+          } elseif ($action == 'add_occupancy_plan') {
+             $occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
+             if ($occupancy_plan_id == -1){
+                $dbg_str = '<div class="updated"><p><strong>'.
+                        htmlentities(sprintf(__('A Object with Name [%s] already exists!', 'occupancyplan'),$occupancy_plan_name)).
+                      '</strong></p></div>'."\n";
+              $occupancy_plan_id = 1;
+             }
+          } elseif ($action == 'del_occupancy_plan') {   
+             $occupancy_plan_id   = delete_occupancy_plan($occupancy_plan_id);
+            if ($occupancy_plan_id == -1){
+               $occupancy_plan_id = 1;
+              include_once('occupancy_plan_classes.php');
+               $tmp = new occupancy_plan_Settings($occupancy_plan_id);
+               $dbg_str = '<div class="updated"><p><strong>'.
+                        htmlentities(sprintf(__('The first Object [%s] can not be deleted!', 'occupancyplan'),$tmp->occupancy_plan_name)).
+                      '</strong></p></div>'."\n";
+           
+             } else {
+                $dbg_str = '<div class="updated"><p><strong>'.
+                         htmlentities(sprintf(__('The Object [%s] successfully deleted!', 'occupancyplan'),$occupancy_plan_name)).
+                      '</strong></p></div>'."\n";     
             }
-         }
-         if (isset($occupancy_plan_id)) {
-            update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
-           $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(sprintf(__('Optionen von [%s] erfolgreich gespeichert!', 'occupancyplan'),$occupancy_plan_name)).
-                  '</strong></p></div>'."\n";
-         }
-      } elseif ($action == 'add_occupancy_plan') {
-         $occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
-         if ($occupancy_plan_id == -1){
-            $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__('Ein Objekt mit dem Namen [%s] existiert bereits!', 'occupancyplan'),$occupancy_plan_name)).
-                  '</strong></p></div>'."\n";
-          $occupancy_plan_id = 1;
-         }
-      } elseif ($action == 'del_occupancy_plan') {   
-         $occupancy_plan_id   = delete_occupancy_plan($occupancy_plan_id);
-        if ($occupancy_plan_id == -1){
-           $occupancy_plan_id = 1;
-          include_once('occupancy_plan_classes.php');
-           $tmp = new occupancy_plan_Settings($occupancy_plan_id);
-           $dbg_str = '<div class="updated"><p><strong>'.
-                    htmlentities(sprintf(__('Das erste Objekt [%s] kann nicht gelöscht werden!', 'occupancyplan'),$tmp->occupancy_plan_name)).
-                  '</strong></p></div>'."\n";
-       
-         } else {
-            $dbg_str = '<div class="updated"><p><strong>'.
-                     htmlentities(sprintf(__('Das Objekt [%s] wurde gelöscht!', 'occupancyplan'),$occupancy_plan_name)).
-                  '</strong></p></div>'."\n";     
-        }
-      }  
+          }  
+    }
    }
 ?>
   <div class="wrap">
-      <h2><? _e('Belegungsplan', 'occupancyplan');?></h2>
+      <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>
 <?
    if (isset($dbg_str)) {
       echo $dbg_str;
    }
    include_once('occupancy_plan_classes.php');
    $getOutput = new occupancy_plan_Output($occupancy_plan_id, TRUE);
-   echo $getOutput->view();   
+   echo $getOutput->view($zeit);   
 ?>
   </div>
 <?php  
@@ -329,8 +406,10 @@ function delete_occupancy_plan($id) {
 function update_occupancy_plan($tage, $id) {
    global $wpdb;
    $ret = '';
+/* 
    $sql = "DELETE FROM ".$wpdb->prefix."belegung_daten WHERE bd_objekt_id = ".$id.";";
    $wpdb->query($sql);
+*/
    if (isset($tage)) {
       foreach ($tage as $datum) {
          $wpdb->query("INSERT INTO ".$wpdb->prefix."belegung_daten (bd_datum, bd_objekt_id) VALUES('".$datum."',".$id.");");

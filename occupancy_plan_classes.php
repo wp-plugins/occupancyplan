@@ -1,39 +1,39 @@
 <?php
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
-define('chgname', htmlentities(__("Name ändern", 'occupancyplan')));
-define('c_color_def', htmlentities(__("Textfarbe Standard", 'occupancyplan')));
-define('c_color_tabborder', htmlentities(__("Rahmenfarbe", 'occupancyplan')));
-define('c_color_tabinner', htmlentities(__("Hintergrundfarbe Tage Standard", 'occupancyplan')));
-define('c_color_tabinnerDays', htmlentities(__("Tabellenfarbe Wochentage", 'occupancyplan')));
-define('c_color_tabhead', htmlentities(__("Tabellenfarbe Kopf", 'occupancyplan')));
-define('c_color_holiday', htmlentities(__("Textfarbe Feiertag", 'occupancyplan')));
-define('c_color_today', htmlentities(__("Textfarbe Aktueller Tag", 'occupancyplan')));
-define('c_color_nildays', htmlentities(__("Hintergrundfarbe leere Tage", 'occupancyplan')));
-define('c_color_assigned', htmlentities(__("Hintergrundfarbe belegte Tage", 'occupancyplan')));
-define('c_main_with', htmlentities(__("Breite der Anzeige in Pixel", 'occupancyplan')));
-define('c_heading', htmlentities(__("Anzeigentext", 'occupancyplan')));
-define('c_number_month', htmlentities(__("Anzahl Monate die angezeigt werden", 'occupancyplan')));
+define('chgname', htmlentities(__("Change Name", 'occupancyplan')));
+define('c_color_def', htmlentities(__("Textcolor default", 'occupancyplan')));
+define('c_color_tabborder', htmlentities(__("Bordercolor", 'occupancyplan')));
+define('c_color_tabinner', htmlentities(__("Backgroundcolor days default", 'occupancyplan')));
+define('c_color_tabinnerDays', htmlentities(__("Tablecolor days of week", 'occupancyplan')));
+define('c_color_tabhead', htmlentities(__("Tablecolor Header", 'occupancyplan')));
+define('c_color_holiday', htmlentities(__("Textcolor Holiday", 'occupancyplan')));
+define('c_color_today', htmlentities(__("Textcolor current day", 'occupancyplan')));
+define('c_color_nildays', htmlentities(__("Backgroundcolor empty days", 'occupancyplan')));
+define('c_color_assigned', htmlentities(__("Backgroundcolor occupied days", 'occupancyplan')));
+define('c_main_with', htmlentities(__("Viewwidth in pixel", 'occupancyplan')));
+define('c_heading', htmlentities(__("Viewtext", 'occupancyplan')));
+define('c_number_month', htmlentities(__("Count of month to view", 'occupancyplan')));
 
-define('c_month_01', htmlentities(__("Januar", 'occupancyplan')));
-define('c_month_02', htmlentities(__("Februar", 'occupancyplan')));
-define('c_month_03', htmlentities(__("März", 'occupancyplan')));
+define('c_month_01', htmlentities(__("January", 'occupancyplan')));
+define('c_month_02', htmlentities(__("February", 'occupancyplan')));
+define('c_month_03', htmlentities(__("March", 'occupancyplan')));
 define('c_month_04', htmlentities(__("April", 'occupancyplan')));
-define('c_month_05', htmlentities(__("Mai", 'occupancyplan')));
-define('c_month_06', htmlentities(__("Juni", 'occupancyplan')));
-define('c_month_07', htmlentities(__("Juli", 'occupancyplan')));
+define('c_month_05', htmlentities(__("May", 'occupancyplan')));
+define('c_month_06', htmlentities(__("June", 'occupancyplan')));
+define('c_month_07', htmlentities(__("July", 'occupancyplan')));
 define('c_month_08', htmlentities(__("August", 'occupancyplan')));
 define('c_month_09', htmlentities(__("September", 'occupancyplan')));
-define('c_month_10', htmlentities(__("Oktober", 'occupancyplan')));
+define('c_month_10', htmlentities(__("October", 'occupancyplan')));
 define('c_month_11', htmlentities(__("November", 'occupancyplan')));
-define('c_month_12', htmlentities(__("Dezember", 'occupancyplan')));
-define('c_day1', htmlentities(__("Mo", 'occupancyplan')));
-define('c_day2', htmlentities(__("Di", 'occupancyplan')));
-define('c_day3', htmlentities(__("Mi", 'occupancyplan')));
-define('c_day4', htmlentities(__("Do", 'occupancyplan')));
-define('c_day5', htmlentities(__("Fr", 'occupancyplan')));
-define('c_day6', htmlentities(__("Sa", 'occupancyplan')));
-define('c_day7', htmlentities(__("So", 'occupancyplan')));
+define('c_month_12', htmlentities(__("December", 'occupancyplan')));
+define('c_day1', htmlentities(__("Mon", 'occupancyplan')));
+define('c_day2', htmlentities(__("Tue", 'occupancyplan')));
+define('c_day3', htmlentities(__("Wed", 'occupancyplan')));
+define('c_day4', htmlentities(__("Thu", 'occupancyplan')));
+define('c_day5', htmlentities(__("Fri", 'occupancyplan')));
+define('c_day6', htmlentities(__("Sat", 'occupancyplan')));
+define('c_day7', htmlentities(__("Sun", 'occupancyplan')));
 
 
 class occupancy_plan_Settings
@@ -125,7 +125,7 @@ class occupancy_plan_Settings
             if (array_key_exists($daten->bc_name, $this->values)) {
                $this->values[$daten->bc_name] = $daten->bc_wert;
             } else {
-               exit('<p>'.htmlentities(sprintf(__('%s existiert nicht. Bitte prüfe deine Datenbank.', 'occupancyplan'),$daten->bc_name)).'</p>');
+               exit('<p>'.htmlentities(sprintf(__('%s not exists. please check your database.', 'occupancyplan'),$daten->bc_name)).'</p>');
             }
          }
       }
@@ -146,7 +146,7 @@ class occupancy_plan_Settings
          if (array_key_exists($indexname, $this->desc)) {
             return $this->desc[$indexname];
          } else {
-            exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.', 'occupancyplan'),$indexname)).'</p>');
+            exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname)).'</p>');
          }
       }
       // default properties
@@ -158,7 +158,7 @@ class occupancy_plan_Settings
       } elseif (array_key_exists($indexname, $this->values)) {
          return $this->values[$indexname];
       } else {
-         exit('<p>'.htmlentities(sprintf(__('%s existiert nicht.', 'occupancyplan'),$indexname)).'</p>');
+         exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname)).'</p>');
       }
    }
 }
@@ -183,7 +183,7 @@ class occupancy_plan_Output
       $this->IsAdmin   = $isadmin;
    }
    
-   public function view() {
+   public function view($zeit) {
       global $wpdb;
 
       // check if occupancy_Plan_ID exists
@@ -210,17 +210,31 @@ class occupancy_plan_Output
          $settings = new occupancy_plan_Settings($this->occupancy_Plan_ID);
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<div class="updated"><strong><p>'."\n";
-            $ausgabe .= __('Wenn ihr eine Spende in H&ouml;he von 15,00 EUR gebt, bekommt ihr einen Link zum download des Plugins ohne', 'occupancyplan')."</p><p>\n";
-            $ausgabe .= __('den Copyright Vermerk. Ausserdem wird diese Spendenbitte im Admin-Interface nicht mehr angezeigt.', 'occupancyplan')."</p></strong>\n";
-            $ausgabe .= '<form action="https://www.paypal.com/cgi-bin/webscr" method="post">'."\n";
-            $ausgabe .= '<input type="hidden" name="cmd" value="_s-xclick" />'."\n";
-            $ausgabe .= '<input type="hidden" name="hosted_button_id" value="4217138" />'."\n";
-            $ausgabe .= '<input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="" />'."\n";
-            $ausgabe .= '<img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" /><br />'."\n";
-            $ausgabe .= '</form>'."\n";
+            $ausgabe .= sprintf(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted%s'.
+                                   'the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan'),
+                                   
+            /* $ausgabe .= sprintf(__('Es gibt die M&ouml;glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht einger&auml;mt,%s'.
+                                   'die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s muessen aber erhalten bleiben.', 'occupancyplan'),*/
+	                        '</p><p>'."\n",
+	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p></strong>\n";
+	    $ausgabe .= '<strong><p>';
+	    /* $ausgabe .= sprintf(__('Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20.00 EUR).', 'occupancyplan'),*/
+	    $ausgabe .= sprintf(__('Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR).', 'occupancyplan'),
+	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p><p>\n";
+	    /* $ausgabe .= __('Damit ist das Plugin dann voellig Werbefrei.', 'occupancyplan')."</p><p>\n";*/
+	    $ausgabe .= __('Thus the plug is then completely free of advertising.', 'occupancyplan')."</p><p>\n";
+	    /* $ausgabe .= __('Fuer beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird.', 'occupancyplan');	    */
+	    $ausgabe .= __('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan');
+	    $ausgabe .= '</p></strong>';
+	    $ausgabe .= '<strong><p>';	    
+            /* $ausgabe .= sprintf(__('Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)', 'occupancyplan'),*/
+            $ausgabe .= sprintf(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan'),
+	                        sprintf('<a href="mailto:wordpress%su.de">wordpress%su.de</a>','@gods4','@gods4'));
+	    $ausgabe .= '</p></strong>';
             $ausgabe .= '</div>'."\n";
             
-            $ausgabe .= '<p><strong>'.htmlentities(__('Zum anzeigen der Übersicht folgenden Text in die Seite einfügen:', 'occupancyplan')).'</strong>';
+            /* $ausgabe .= '<p><strong>'.htmlentities(__('Zum anzeigen der Ãœbersicht folgenden Text in die Seite einfÃ¼gen:', 'occupancyplan')).'</strong>'   */
+            $ausgabe .= '<p><strong>'.htmlentities(__('To view the Overview, insert following text to page:', 'occupancyplan')).'</strong>';
             $ausgabe .= htmlentities(' <!-- belegungsplan '.$this->occupancy_Plan_ID.' -->').'</p>'."\n";
             $listbox = "\t".'<select name="occupancy_plan_id" style="width: 80%;">'."\n";
             $sql = "select bo_description, bo_objekt_id from ".$wpdb->prefix."belegung_objekte;";
@@ -239,11 +253,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine andere Übersicht auswählen:', 'occupancyplan')).'</td>';
+                        htmlentities(__('Select Overview', 'occupancyplan')).'</td>';
             $ausgabe .= '      <td>'.$listbox.'</td>';
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Wählen', 'occupancyplan')).'" />';
+                        htmlentities(__('Select', 'occupancyplan')).'" />';
             $ausgabe .= '      </td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>";
@@ -254,11 +268,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine Übersicht löschen:', 'occupancyplan')).'</td>';
+                        htmlentities(__('delete Overview:', 'occupancyplan')).'</td>';
             $ausgabe .= '      <td>'.$listbox."</td>";
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="objectdelete" class="button-primary" value="'.
-                        htmlentities(__('Löschen', 'occupancyplan')).'" /></td>'."\n";
+                        htmlentities(__('delete', 'occupancyplan')).'" /></td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= $error_str;   
             $ausgabe .= "</table>";
@@ -270,10 +284,10 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";    
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Eine neue Übersicht hinzufügen:', 'occupancyplan')).'</td>'."\n";
+                        htmlentities(__('Add new Overview:', 'occupancyplan')).'</td>'."\n";
             $ausgabe .= '      <td><input type="text" style="width: 80%" maxlength="50" name="occupancy_plan_name" value=""></td>'."\n";
             $ausgabe .= '      <td style="width: 20%;"><input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Hinzufügen', 'occupancyplan')).'" />'."\n";
+                        htmlentities(__('Add', 'occupancyplan')).'" />'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>\n";
             $ausgabe .= '<input name="occupancy_plan_action" value="add_occupancy_plan" type="hidden" />'."\n";
@@ -285,20 +299,22 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Name der Übersicht ändern:', 'occupancyplan')).'</td>'."\n";
+                        htmlentities(__('Change Overviewname:', 'occupancyplan')).'</td>'."\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="70px" maxlength="50" name="occupancy_plan_name" value="'.$description.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Überschrift:', 'occupancyplan'))."</td>\n";
+                        htmlentities(__('Headline', 'ocupancyplan'))."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="80%" maxlength="250" name="heading" value="'.$settings->heading.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Anzahl Monate:', 'occupancyplan'))."</td>\n";
+                        htmlentities(__('Count of month:', 'occupancyplan'))."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="7" maxlength="2" name="number_month" value="'.$settings->number_month.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
-            foreach ($settings->default_values as $key => $value) {
+
+            $devval = $settings->default_values;
+            foreach ($devval as $key => $value) {
                $pos = strpos($key, 'color_');
                if ($pos === FALSE) {
                   $pos = strpos($key, 'main_');
@@ -332,7 +348,7 @@ class occupancy_plan_Output
             }
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="text-align:right;" colspan="4"><input type="submit" name="setsettings" class="button-primary" value="'.
-                         htmlentities(__('Aktualisieren', 'occupancyplan')).'" /></td>'."\n";
+                         htmlentities(__('refresh', 'occupancyplan')).'" /></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "</table>";
             $ausgabe .= "</form>\n";
@@ -346,10 +362,17 @@ class occupancy_plan_Output
          }
          $ausgabe .= "    <tr>\n";
 
-         $zeit = localtime ( time (), 1 );
+         /* Time is now set by function call - supports now prev/next */
+         /* $zeit = localtime ( time (), 1 ); */
+
          $jahr_j = 1900 + $zeit['tm_year'];
          $mymonth = $zeit['tm_mon'];
          $mymonth++;
+	 
+	 $jahr_norm = $jahr_j;
+	 $mymonth_norm = $mymonth;
+
+	 $zeit_prev = mktime(0,0,0,$mymonth - $settings->number_month, 1, $jahr_j);
 
          $d = 0;
          for($z = 1; $z <= $settings->number_month; $z++) {
@@ -390,18 +413,23 @@ class occupancy_plan_Output
          if ($this->IsAdmin === FALSE) {
 		    /* BEGINN ZUSATZ LIZENZ (c) 2009 Peter Welz */
 			/* Folgende Zeilen muessen IMMER unter der Uebersicht ausgegeben werden. Wenn dies nicht gegeben ist, haben sie keine Berechtigung, */
-			/* dieses Script in irgendeiner Art und Weise zu benutzen/ zu aendern.*/
+			/* dieses Script in irgendeiner Art und Weise zu benutzen/ zu aendern. */
+			/* Sind sie im Besitz einer Rechnung Ã¼ber eine erweiterte Zusatzlizenz (Kosten: 20.00 EUR), dann */
+			/* duerfen folgende Zeilen auskommentiert werden. */
             $ausgabe .= '          <table class="unknown_" style="border-width: 0px 0px 0px 0px; '.
                         'border-spacing: 0px; border-style: none none none none; '.
                         ' border-collapse: separate; width: 100%; text-align: center; font-size: 7px;">'."\n";
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
-            $ausgabe .= '&copy; 2009 by Peter Welz [<a href="http://www.gods4u.de/wordpress-plugin-belegungplan-wp-occupancyplan/"'.
-			            ' target="_blank" title="Belegungs- / occupancyplan" alt="Wordpress plugin Belegungsplan">Occupancy plan</a>]&nbsp;&nbsp;'.
-						'<a href="http://www.ferienstrandwohnung.de" target="_blank" title="Ferien an der Ostsee" '.
-                  'alt="ostssee ferienstrandwohnung ostseebadnienhagen">Ferienhaus</a>&nbsp;&nbsp;'.
-			            '<a href="http://www.ostsee-villa-erika.de" target="_blank" title="ferienwohnung ostsee villa erika"'.
-                     ' alt="ostssee ferienwohnung villa erika ostseebadnienhagen">Ostsee Villa</a>'."\n";
+            $ausgabe .= '&copy; 2009 by Peter Welz [<a href="http://www.gods4u.de/"'.
+			' target="_blank" title="Belegungs- / occupancyplan" alt="Wordpress plugin Belegungsplan">Belegungsplan</a>]';
+			/* Sind sie im Besitz einer Rechnung Ã¼ber die Zusatzlizenz (Kosten: 15.00 EUR), dann */
+			/* duerfen folgende Zeilen auskommentiert werden. Die Zeilen ueber diesem Kommentar muessen aber erhalten bleiben. */			
+	    $ausgabe .= '&nbsp;&nbsp;';
+	    $ausgabe .= '<a href="http://www.ferienstrandwohnung.de" target="_blank" title="Ferien an der Ostsee" '.
+                        'alt="ostssee ferienstrandwohnung ostseebadnienhagen">Ferienhaus</a>&nbsp;&nbsp;'.
+		        '<a href="http://www.ostsee-villa-erika.de" target="_blank" title="ferienwohnung ostsee villa erika"'.
+                        ' alt="ostssee ferienwohnung villa erika ostseebadnienhagen">Ostsee Villa</a>'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '            </tr>'."\n";	
             $ausgabe .= '          </table>'."\n";
@@ -411,7 +439,7 @@ class occupancy_plan_Output
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
             $ausgabe .= '                <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Aktualisieren', 'occupancyplan')).'" />'."\n";
+                        htmlentities(__('refresh', 'occupancyplan')).'" />'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '          </table>'."\n";         
             $ausgabe .= '          </td></tr>'."\n";
@@ -419,6 +447,33 @@ class occupancy_plan_Output
          }
          $ausgabe .= '        </td>'."\n";
          $ausgabe .= '      </tr>'."\n";         
+	 $ausgabe .= '      <tr>'."\n";
+         if ($this->IsAdmin === FALSE) {	 
+            $ausgabe .= '      <form name="prev_next" method="post" action="#'.$this->occupancy_Plan_ID.'">'."\n";	 
+	 }
+	 $ausgabe .= '        <td style="text-align:left;">'."\n";
+	 $ausgabe .= '      <a name="'.$this->occupancy_Plan_ID.'"></a>'."\n";	 
+         $ausgabe .= '        <input type="submit" name="prev_cal" value="&lt;" />'."\n";
+	 $ausgabe .= '        <input type="hidden" name="time_year" value="'.date("Y", $zeit_prev).'" />'."\n";
+	 $ausgabe .= '        <input type="hidden" name="time_month" value="'.date("n", $zeit_prev).'" />'."\n";
+	 $ausgabe .= '        <input type="hidden" name="time_oid" value="'.$this->occupancy_Plan_ID.'" />'."\n";
+	 $ausgabe .= '        </td>'."\n";
+	 $ausgabe .= '        <td>'."\n";
+	 $ausgabe .= '         &nbsp;'."\n";
+	 $ausgabe .= '        </td>'."\n";	 
+	 $ausgabe .= '        <td style="text-align:right;">'."\n";
+         $ausgabe .= '        <input type="submit" name="next_cal" value="&gt;" />'."\n";	 	 
+	 $ausgabe .= '        <input type="hidden" name="time_year_next" value="'.$jahr_j.'" />'."\n";
+	 $ausgabe .= '        <input type="hidden" name="time_month_next" value="'.$mymonth.'" />'."\n";
+         if ($this->IsAdmin === TRUE) {	 	 
+   	    $ausgabe .= '        <input type="hidden" name="time_month_norm" value="'.$mymonth_norm.'" />'."\n";
+   	    $ausgabe .= '        <input type="hidden" name="time_year_norm" value="'.$jahr_norm.'" />'."\n";	    
+         }
+	 $ausgabe .= '        </td>'."\n";
+         if ($this->IsAdmin === FALSE) {	 
+	    $ausgabe .= '      </form>'."\n";	 
+	 }
+	 $ausgabe .= '      </tr>'."\n";
          $ausgabe .= '    </table>'."\n";
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<input name="occupancy_plan_id" value="'.$this->occupancy_Plan_ID.'" type="hidden" />'."\n";
@@ -460,7 +515,7 @@ class occupancy_plan_Output
          }
       }
 
-      //leere tage einfügen
+      //leere tage einfÃ¼gen
       $timestamp=mktime(0,0,0,$mon_,1,$jahr_);
       $tage_im_mon=date("t",$timestamp);
       $dat=getdate($timestamp);
@@ -487,7 +542,7 @@ class occupancy_plan_Output
       $heute_tag=date("d",$zeit);
       $heute_mon=date("m",$zeit);
       $heute_jahr=date("Y",$zeit);
-      $woche=bcsub(7,$woche - 1);
+      $woche=7-($woche - 1);
       for($i=1; $i<=$woche; $i++) {
          $i="0$i";
          if (array_search("".$jahr_."-".$mon_."-".$i."", $myarray) === FALSE) {
@@ -506,11 +561,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '; color: '.$settings->color_today.';" title="'.
-                            htmlentities(__('belegt', 'occupancyplan')).
+                            htmlentities(__('busy', 'occupancyplan')).
                             '">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.';" title="'.
-                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            htmlentities(__('busy', 'occupancyplan')).'">'.$i.'</td>'."\n";
             }
          }
          if ($this->IsAdmin === TRUE) {
@@ -522,7 +577,7 @@ class occupancy_plan_Output
       $ausgabe .= "          </tr>\n";
       $ausgabe .= "          <tr>\n";
       $y = 0;
-      //other dazs
+      //other days
       for($i = $woche + 1; $i <= $tage_im_mon; $i++) {
          if(strlen($i) == 1) { $i = "0$i"; }
          if (array_search($jahr_."-".$mon_."-".$i, $myarray) === FALSE) {
@@ -531,7 +586,7 @@ class occupancy_plan_Output
                           $jahr_.'-'.$mon_.'-'.$i.'" /></td>'."\n";
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.
-                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('heute', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('today', 'occupancyplan')).'">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.';">'.$i."</td>\n";
             }
@@ -543,11 +598,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.'; color: '.
                             $settings->color_today.';" title="'.
-                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '" title="'.
-                            htmlentities(__('belegt', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
             }
          }
          $y++;
@@ -562,18 +617,18 @@ class occupancy_plan_Output
          }
       }
       //add nil days
-      $sum_tage = bcadd($dat['wday'] -1, $tage_im_mon);
+      $sum_tage = ($dat['wday'] - 1) + $tage_im_mon;
       if($sum_tage == 28) {
-         $rest=bcsub(42, $sum_tage);
+         $rest=42 - $sum_tage;
       }
       elseif(($sum_tage > 28) and ($sum_tage < 35)) {
-         $rest = bcsub(42, $sum_tage);
+         $rest = 42 - $sum_tage;
       }
       elseif($sum_tage == 35) {
-         $rest = bcsub(42, $sum_tage);
+         $rest = 42 - $sum_tage;
       }
       elseif($sum_tage > 35) {
-         $rest = bcsub(42, $sum_tage);
+         $rest = 42 - $sum_tage;
       }
       for ($i = 0; $i < $rest; $i++) {
          $y++;
