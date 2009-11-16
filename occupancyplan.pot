@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
-"POT-Creation-Date: 2009-11-16 11:18+0000\n"
+"POT-Creation-Date: 2009-11-16 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,79 +157,81 @@ msgstr ""
 #, php-format
 msgid ""
 "There is the possibility of acquiring an additional license (cost: 15.00 "
-"EUR). With the acquisition of an additional license is granted%s"
+"EUR). With the acquisition of an additional license is granted %s the right "
+"to remove the advertising links below the calendar issue. The copyright and "
+"the link to %s must remain the same."
 msgstr ""
 
-#: occupancy_plan_classes.php:222
+#: occupancy_plan_classes.php:219
 #, php-format
 msgid ""
 "Should the reference to %s will also be removed, you need to buy an extended "
 "additional license (cost: 20.00 EUR)."
 msgstr ""
 
-#: occupancy_plan_classes.php:225
+#: occupancy_plan_classes.php:222
 msgid "Thus the plug is then completely free of advertising."
 msgstr ""
 
-#: occupancy_plan_classes.php:227
+#: occupancy_plan_classes.php:224
 msgid "Invoices are issued for both licenses. VAT will not be shown here."
 msgstr ""
 
-#: occupancy_plan_classes.php:231
+#: occupancy_plan_classes.php:228
 #, php-format
 msgid "To purchase any of these additional licenses, register via email. (%s)"
 msgstr ""
 
-#: occupancy_plan_classes.php:237
+#: occupancy_plan_classes.php:234
 msgid "To view the Overview, insert following text to page:"
 msgstr ""
 
-#: occupancy_plan_classes.php:256
+#: occupancy_plan_classes.php:253
 msgid "Select Overview"
 msgstr ""
 
-#: occupancy_plan_classes.php:260
+#: occupancy_plan_classes.php:257
 msgid "Select"
 msgstr ""
 
-#: occupancy_plan_classes.php:271
+#: occupancy_plan_classes.php:268
 msgid "delete Overview:"
 msgstr ""
 
-#: occupancy_plan_classes.php:275
+#: occupancy_plan_classes.php:272
 msgid "delete"
 msgstr ""
 
-#: occupancy_plan_classes.php:287
+#: occupancy_plan_classes.php:284
 msgid "Add new Overview:"
 msgstr ""
 
-#: occupancy_plan_classes.php:290
+#: occupancy_plan_classes.php:287
 msgid "Add"
 msgstr ""
 
-#: occupancy_plan_classes.php:302
+#: occupancy_plan_classes.php:299
 msgid "Change Overviewname:"
 msgstr ""
 
-#: occupancy_plan_classes.php:307
+#: occupancy_plan_classes.php:304
 msgid "Headline"
 msgstr ""
 
-#: occupancy_plan_classes.php:312
+#: occupancy_plan_classes.php:309
 msgid "Count of month:"
 msgstr ""
 
-#: occupancy_plan_classes.php:351 occupancy_plan_classes.php:442
+#: occupancy_plan_classes.php:348 occupancy_plan_classes.php:439
 msgid "refresh"
 msgstr ""
 
-#: occupancy_plan_classes.php:564 occupancy_plan_classes.php:568
-#: occupancy_plan_classes.php:601 occupancy_plan_classes.php:605
+#: occupancy_plan_classes.php:561 occupancy_plan_classes.php:565
+#: occupancy_plan_classes.php:598 occupancy_plan_classes.php:602
 msgid "busy"
 msgstr ""
 
-#: occupancy_plan_classes.php:589
+#: occupancy_plan_classes.php:586
 msgid "today"
 msgstr ""
 
