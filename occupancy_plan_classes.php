@@ -411,22 +411,22 @@ class occupancy_plan_Output
 		    /* BEGINN ZUSATZ LIZENZ (c) 2009 Peter Welz */
 			/* Folgende Zeilen muessen IMMER unter der Uebersicht ausgegeben werden. Wenn dies nicht gegeben ist, haben sie keine Berechtigung, */
 			/* dieses Script in irgendeiner Art und Weise zu benutzen/ zu aendern. */
-			/* Sind sie im Besitz einer Rechnung über eine erweiterte Zusatzlizenz (Kosten: 20.00 EUR), dann */
+			/* Sind sie im Besitz einer Rechnung ueber eine erweiterte Zusatzlizenz (Kosten: 20.00 EUR), dann */
 			/* duerfen folgende Zeilen auskommentiert werden. */
             $ausgabe .= '          <table class="unknown_" style="border-width: 0px 0px 0px 0px; '.
                         'border-spacing: 0px; border-style: none none none none; '.
                         ' border-collapse: separate; width: 100%; text-align: center; font-size: 7px;">'."\n";
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
-            $ausgabe .= '&copy; 2009 by Peter Welz [<a href="http://www.gods4u.de/"'.
-			' target="_blank" title="Belegungs- / occupancyplan" alt="Wordpress plugin Belegungsplan">Belegungsplan</a>]';
+            $ausgabe .= '&copy; 2009 by Peter Welz <a href="http://www.gods4u.de/"'.
+			' target="_blank" title="Belegungsplan - Occupancyplan - Plugin f&uuml;r Wordpress" alt="Belegungsplan Plugin f&uuml;r Wordpress - Occupancyplan">Belegungsplan</a>';
 			/* Sind sie im Besitz einer Rechnung über die Zusatzlizenz (Kosten: 15.00 EUR), dann */
 			/* duerfen folgende Zeilen auskommentiert werden. Die Zeilen ueber diesem Kommentar muessen aber erhalten bleiben. */			
 	    $ausgabe .= '&nbsp;&nbsp;';
 	    $ausgabe .= '<a href="http://www.ferienstrandwohnung.de" target="_blank" title="Ferien an der Ostsee" '.
                         'alt="ostssee ferienstrandwohnung ostseebadnienhagen">Ferienhaus</a>&nbsp;&nbsp;'.
-		        '<a href="http://www.ostsee-villa-erika.de" target="_blank" title="ferienwohnung ostsee villa erika"'.
-                        ' alt="ostssee ferienwohnung villa erika ostseebadnienhagen">Ostsee Villa</a>'."\n";
+		        '<a href="http://www.ostsee-fewo-nienhagen.de" target="_blank" title="ferienwohnung ostsee mecklenburg" alt="ostssee ferienwohnung mecklenburgn">Ostsee</a>'.
+                        '<a href="http://www.ostsee-villa-erika.de" target="_blank" title="ferienwohnung ostsee villa erika" alt="ostssee ferienwohnung villa erika ostseebadnienhagen"> Villa</a>'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '            </tr>'."\n";	
             $ausgabe .= '          </table>'."\n";
