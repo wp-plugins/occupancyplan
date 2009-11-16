@@ -300,8 +300,8 @@ class occupancy_plan_Output
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="70px" maxlength="50" name="occupancy_plan_name" value="'.$description.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
-            $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Headline', 'ocupancyplan'))."</td>\n";
+            $ausgabe .= '               <td style="width: 25%; text-align: left;">';
+            $ausgabe .= htmlentities(__('Headline', 'occupancyplan'))."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="80%" maxlength="250" name="heading" value="'.$settings->heading.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";

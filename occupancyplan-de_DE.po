@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ocupancyplan\n"
+"Project-Id-Version: Occupancyplan\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
-"POT-Creation-Date: 2009-11-16 11:50+0000\n"
+"POT-Creation-Date: 2009-11-16 12:45+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Welz, Peter <p.welz@directonline.de>\n"
-"Language-Team:  <wordpress@gods4u.de>\n"
+"Language-Team: Welz, Peter <wordpress@gods4u.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgstr "Textfarbe Standard"
 
 #: occupancy_plan_classes.php:6
 msgid "Bordercolor"
-msgstr "Hintergrundfarbe"
+msgstr "Rahmenfarbe"
 
 #: occupancy_plan_classes.php:7
 msgid "Backgroundcolor days default"
@@ -55,7 +55,7 @@ msgstr "Hintergrundfarbe belegte Tage"
 
 #: occupancy_plan_classes.php:14
 msgid "Viewwidth in pixel"
-msgstr "Ansichtsbreite in pixel"
+msgstr "Ansichtsbreite in Pixel"
 
 #: occupancy_plan_classes.php:15
 msgid "Viewtext"
@@ -63,7 +63,7 @@ msgstr "Ansichtstext"
 
 #: occupancy_plan_classes.php:16
 msgid "Count of month to view"
-msgstr "Anzahl der Monate"
+msgstr "Anzahl Monate zum anzeigen"
 
 #: occupancy_plan_classes.php:18
 msgid "January"
@@ -205,7 +205,7 @@ msgstr "Hinzufügen"
 
 #: occupancy_plan_classes.php:299
 msgid "Change Overviewname:"
-msgstr "Name der Übersicht ändern:"
+msgstr "Name ändern:"
 
 #: occupancy_plan_classes.php:304
 msgid "Headline"
@@ -213,7 +213,7 @@ msgstr "Überschrift"
 
 #: occupancy_plan_classes.php:309
 msgid "Count of month:"
-msgstr "Anzahl Monate:"
+msgstr "Anzahl Monate zum anzeigen:"
 
 #: occupancy_plan_classes.php:348
 #: occupancy_plan_classes.php:439
@@ -242,7 +242,7 @@ msgstr "\\\"%s\\\" gebe eine Nummer ein!"
 
 #: occupancy_plan_options.php:110
 msgid "count of month"
-msgstr "Anzahl Monate"
+msgstr "Anzahl Monate zum anzeigen"
 
 #: occupancy_plan_options.php:116
 msgid "Please enter a Number between 1-100"
