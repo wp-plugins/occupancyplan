@@ -1,0 +1,288 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Occupancyplan\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
+"POT-Creation-Date: 2009-11-16 12:45+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Welz, Peter <p.welz@directonline.de>\n"
+"Language-Team: Welz, Peter <wordpress@gods4u.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: occupancy_plan_classes.php:4
+msgid "Change Name"
+msgstr "Name ändern"
+
+#: occupancy_plan_classes.php:5
+msgid "Textcolor default"
+msgstr "Textfarbe Standard"
+
+#: occupancy_plan_classes.php:6
+msgid "Bordercolor"
+msgstr "Rahmenfarbe"
+
+#: occupancy_plan_classes.php:7
+msgid "Backgroundcolor days default"
+msgstr "Hintergrundfarbe Tage Standard"
+
+#: occupancy_plan_classes.php:8
+msgid "Tablecolor days of week"
+msgstr "Tabellenfarbe Wochentage"
+
+#: occupancy_plan_classes.php:9
+msgid "Tablecolor Header"
+msgstr "Tabellenfarbe Kopf"
+
+#: occupancy_plan_classes.php:10
+msgid "Textcolor Holiday"
+msgstr "Textfarbe Feiertage"
+
+#: occupancy_plan_classes.php:11
+msgid "Textcolor current day"
+msgstr "Textfarbe aktueller Tag"
+
+#: occupancy_plan_classes.php:12
+msgid "Backgroundcolor empty days"
+msgstr "Hintergrundfarbe leere Tage"
+
+#: occupancy_plan_classes.php:13
+msgid "Backgroundcolor occupied days"
+msgstr "Hintergrundfarbe belegte Tage"
+
+#: occupancy_plan_classes.php:14
+msgid "Viewwidth in pixel"
+msgstr "Ansichtsbreite in Pixel"
+
+#: occupancy_plan_classes.php:15
+msgid "Viewtext"
+msgstr "Ansichtstext"
+
+#: occupancy_plan_classes.php:16
+msgid "Count of month to view"
+msgstr "Anzahl Monate zum anzeigen"
+
+#: occupancy_plan_classes.php:18
+msgid "January"
+msgstr "Januar"
+
+#: occupancy_plan_classes.php:19
+msgid "February"
+msgstr "Februar"
+
+#: occupancy_plan_classes.php:20
+msgid "March"
+msgstr "März"
+
+#: occupancy_plan_classes.php:21
+msgid "April"
+msgstr "April"
+
+#: occupancy_plan_classes.php:22
+msgid "May"
+msgstr "Mai"
+
+#: occupancy_plan_classes.php:23
+msgid "June"
+msgstr "Juni"
+
+#: occupancy_plan_classes.php:24
+msgid "July"
+msgstr "Juli"
+
+#: occupancy_plan_classes.php:25
+msgid "August"
+msgstr "August"
+
+#: occupancy_plan_classes.php:26
+msgid "September"
+msgstr "September"
+
+#: occupancy_plan_classes.php:27
+msgid "October"
+msgstr "Oktober"
+
+#: occupancy_plan_classes.php:28
+msgid "November"
+msgstr "November"
+
+#: occupancy_plan_classes.php:29
+msgid "December"
+msgstr "Dezember"
+
+#: occupancy_plan_classes.php:30
+msgid "Mon"
+msgstr "Mo"
+
+#: occupancy_plan_classes.php:31
+msgid "Tue"
+msgstr "Di"
+
+#: occupancy_plan_classes.php:32
+msgid "Wed"
+msgstr "Mi"
+
+#: occupancy_plan_classes.php:33
+msgid "Thu"
+msgstr "Do"
+
+#: occupancy_plan_classes.php:34
+msgid "Fri"
+msgstr "Fr"
+
+#: occupancy_plan_classes.php:35
+msgid "Sat"
+msgstr "Sa"
+
+#: occupancy_plan_classes.php:36
+msgid "Sun"
+msgstr "So"
+
+#: occupancy_plan_classes.php:128
+#, php-format
+msgid "%s not exists. please check your database."
+msgstr "%s existiert nicht. Bitte prüfe deine Datenbank."
+
+#: occupancy_plan_classes.php:149
+#: occupancy_plan_classes.php:161
+#, php-format
+msgid "%s not exists."
+msgstr "%s existiert nicht."
+
+#: occupancy_plan_classes.php:213
+#, php-format
+msgid "There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same."
+msgstr "Es gibt die Möglichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht eingeräumt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s müssen aber erhalten bleiben."
+
+#: occupancy_plan_classes.php:219
+#, php-format
+msgid "Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR)."
+msgstr "Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20.00 EUR)."
+
+#: occupancy_plan_classes.php:222
+msgid "Thus the plug is then completely free of advertising."
+msgstr "Damit ist das Plugin dann völlig Werbefrei."
+
+#: occupancy_plan_classes.php:224
+msgid "Invoices are issued for both licenses. VAT will not be shown here."
+msgstr "Für beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird."
+
+#: occupancy_plan_classes.php:228
+#, php-format
+msgid "To purchase any of these additional licenses, register via email. (%s)"
+msgstr "Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)"
+
+#: occupancy_plan_classes.php:234
+msgid "To view the Overview, insert following text to page:"
+msgstr "Zum anzeigen der Übersicht füge folgenden Text in die Seite ein:"
+
+#: occupancy_plan_classes.php:253
+msgid "Select Overview"
+msgstr "Übersicht auswählen"
+
+#: occupancy_plan_classes.php:257
+msgid "Select"
+msgstr "Auswählen"
+
+#: occupancy_plan_classes.php:268
+msgid "delete Overview:"
+msgstr "Übersicht löschen:"
+
+#: occupancy_plan_classes.php:272
+msgid "delete"
+msgstr "Löschen"
+
+#: occupancy_plan_classes.php:284
+msgid "Add new Overview:"
+msgstr "Neue Übersicht hinzufügen:"
+
+#: occupancy_plan_classes.php:287
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: occupancy_plan_classes.php:299
+msgid "Change Overviewname:"
+msgstr "Name ändern:"
+
+#: occupancy_plan_classes.php:304
+msgid "Headline"
+msgstr "Überschrift"
+
+#: occupancy_plan_classes.php:309
+msgid "Count of month:"
+msgstr "Anzahl Monate zum anzeigen:"
+
+#: occupancy_plan_classes.php:348
+#: occupancy_plan_classes.php:439
+msgid "refresh"
+msgstr "Aktualisieren"
+
+#: occupancy_plan_classes.php:561
+#: occupancy_plan_classes.php:565
+#: occupancy_plan_classes.php:598
+#: occupancy_plan_classes.php:602
+msgid "busy"
+msgstr "besetzt"
+
+#: occupancy_plan_classes.php:586
+msgid "today"
+msgstr "heute"
+
+#: occupancy_plan_options.php:98
+msgid "Please enter a Number between 1-100!"
+msgstr "Bitte gebe eine Nummer zwischen 1-100 ein!"
+
+#: occupancy_plan_options.php:110
+#, php-format
+msgid "\\\"%s\\\" must be entered a number!"
+msgstr "\\\"%s\\\" gebe eine Nummer ein!"
+
+#: occupancy_plan_options.php:110
+msgid "count of month"
+msgstr "Anzahl Monate zum anzeigen"
+
+#: occupancy_plan_options.php:116
+msgid "Please enter a Number between 1-100"
+msgstr "Bitte gebe eine Nummer zwischen 1-100 ein!"
+
+#: occupancy_plan_options.php:220
+msgid "Occupancyplan-Plugin"
+msgstr "Belegungsplan-Plugin"
+
+#: occupancy_plan_options.php:220
+#: occupancy_plan_options.php:369
+msgid "Occupancyplan"
+msgstr "Belegungsplan"
+
+#: occupancy_plan_options.php:316
+#, php-format
+msgid "The Changes to [%s] has been adopted!"
+msgstr "Die Änderungen von [%s] wurden übernommen!"
+
+#: occupancy_plan_options.php:320
+msgid "The Changes has been adopted!"
+msgstr "Die Änderungen wurden übernommen!"
+
+#: occupancy_plan_options.php:338
+#, php-format
+msgid "Options [%s] successfully saved!"
+msgstr "Optionen [%s] erfolgreich gespeichert!"
+
+#: occupancy_plan_options.php:345
+#, php-format
+msgid "A Object with Name [%s] already exists!"
+msgstr "Ein Objekt mit Namen [%s] existiert bereits!"
+
+#: occupancy_plan_options.php:356
+#, php-format
+msgid "The first Object [%s] can not be deleted!"
+msgstr "Das erste Objekt [%s] kann nicht gelöscht werden!"
+
+#: occupancy_plan_options.php:361
+#, php-format
+msgid "The Object [%s] successfully deleted!"
+msgstr "Das Objekt [%s] wurde erfolgreich gelöscht!"
+

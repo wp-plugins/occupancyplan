@@ -1,0 +1,56 @@
+<style type="text/css">
+
+table.occupancy_aussen {
+    border-width: 0px 0px 0px 0px;
+    border-spacing: 5px;
+    border-style: none none none none;
+    border-color: #000000 #000000 #000000 #000000;
+    border-collapse: separate;
+    text-align: center;
+}
+			
+table.occupancy_kalender {
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 1px;
+    border-style: solid solid solid solid;
+    border-collapse: separate;
+    width: 100%;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: arial,helvetica,sans-serif;
+}
+							
+table.occupancy_kalender td {
+    text-align: center;
+    height: 10px;
+    width: 14%;
+}
+
+.submit input,
+.button,
+#postcustomstuff .submit input {
+    text-decoration: none;
+    font-size: 11px !important;
+    line-height: 16px;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 11px;
+    -khtml-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -khtml-box-sizing: content-box;
+    box-sizing: content-box;
+    }
+
+a.button {
+    line-height: 1.2em;
+    -webkit-border-radius: 10px;
+    padding: 4px 10px;
+    white-space: nowrap;
+}
+
+</style>
