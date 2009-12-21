@@ -450,7 +450,7 @@ class occupancy_plan_Output
 	 }
 	 $ausgabe .= '        <td style="text-align:left;">'."\n";
 	 $ausgabe .= '      <a name="'.$this->occupancy_Plan_ID.'"></a>'."\n";	 
-         $ausgabe .= '        <input type="submit" name="prev_cal" value="&lt;" />'."\n";
+         $ausgabe .= '        <input class="button" type="submit" name="prev_cal" value="&lt;" />'."\n";
 	 $ausgabe .= '        <input type="hidden" name="time_year" value="'.date("Y", $zeit_prev).'" />'."\n";
 	 $ausgabe .= '        <input type="hidden" name="time_month" value="'.date("n", $zeit_prev).'" />'."\n";
 	 $ausgabe .= '        <input type="hidden" name="time_oid" value="'.$this->occupancy_Plan_ID.'" />'."\n";
@@ -459,7 +459,7 @@ class occupancy_plan_Output
 	 $ausgabe .= '         &nbsp;'."\n";
 	 $ausgabe .= '        </td>'."\n";	 
 	 $ausgabe .= '        <td style="text-align:right;">'."\n";
-         $ausgabe .= '        <input type="submit" name="next_cal" value="&gt;" />'."\n";	 	 
+         $ausgabe .= '        <input class="button" type="submit" name="next_cal" value="&gt;" />'."\n";	 	 
 	 $ausgabe .= '        <input type="hidden" name="time_year_next" value="'.$jahr_j.'" />'."\n";
 	 $ausgabe .= '        <input type="hidden" name="time_month_next" value="'.$mymonth.'" />'."\n";
          if ($this->IsAdmin === TRUE) {	 	 
