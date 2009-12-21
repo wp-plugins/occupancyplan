@@ -290,6 +290,17 @@ function occupancy_plan_option_page() {
          $new_month = 0;
          $new_year  = 0;
       }
+      if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
+         $next_month = $_POST['time_month_next'];
+      } else {
+         $next_month = 0;
+      }
+      if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
+         $next_year = $_POST['time_year_next'];
+      } else {
+         $next_year = 0;
+      }
+
       if ($new_month == 0) {
         $zeit = localtime(time(), 1);
       } else {
@@ -310,7 +321,9 @@ function occupancy_plan_option_page() {
        }
        if ((isset($action)) && (!empty($action))) {
           if ($action == 'update_occupancy_plan') {
-             $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id);
+             $zeit_von = date("Y-m-d", mktime(0,0,0,$new_month,1,$new_year));
+             $zeit_bis = date("Y-m-d", mktime(0,0,0,$next_month, 0, $next_year));
+             $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id, $zeit_von, $zeit_bis);
            if (isset($occupancy_plan_name)) {
                 $dbg_str = '<div class="updated"><p><strong>'.
                         htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name)).
@@ -403,13 +416,15 @@ function delete_occupancy_plan($id) {
    return $min_id;
 }
 
-function update_occupancy_plan($tage, $id) {
+function update_occupancy_plan($tage, $id, $von, $bis) {
    global $wpdb;
    $ret = '';
-/* 
-   $sql = "DELETE FROM ".$wpdb->prefix."belegung_daten WHERE bd_objekt_id = ".$id.";";
+
+
+   $sql = "DELETE FROM ".$wpdb->prefix."belegung_daten WHERE bd_objekt_id = ".$id.
+	  " and bd_datum between '".$von." 'and '".$bis."';";
    $wpdb->query($sql);
-*/
+
    if (isset($tage)) {
       foreach ($tage as $datum) {
          $wpdb->query("INSERT INTO ".$wpdb->prefix."belegung_daten (bd_datum, bd_objekt_id) VALUES('".$datum."',".$id.");");
