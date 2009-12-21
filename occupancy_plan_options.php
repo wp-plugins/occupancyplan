@@ -226,157 +226,158 @@ function occupancy_plan_option_page() {
 
    $occupancy_plan_id = 1;
 
-   if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
-      if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
-         $new_year = $_POST['time_year'];
-      } else {
-         $new_month = 0;
-      $new_year  = 0;
-      }   
+    if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
+	if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
+	    $new_year = $_POST['time_year'];
+	} else {
+	    $new_month = 0;
+	    $new_year  = 0;
+	}
 
-      if ((isset($_POST['time_month'])) && (!empty($_POST['time_month']))) {
-         $new_month = $_POST['time_month'];
-      } else {
-         $new_month = 0;
-         $new_year  = 0;
-      }
-   
-      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
-         $new_oid = $_POST['time_oid'];
-      } else {
-         $new_oid = -1;
-      }
+	if ((isset($_POST['time_month'])) && (!empty($_POST['time_month']))) {
+	    $new_month = $_POST['time_month'];
+	} else {
+	    $new_month = 0;
+	    $new_year  = 0;
+	}
 
-      if ($new_month == 0) {
-         $zeit = localtime(time(), 1);
-      } else {
-         $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
-      }
-   } elseif ((isset($_POST['next_cal'])) && (!empty($_POST['next_cal']))) {
-      if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
-         $new_year = $_POST['time_year_next'];
-      } else {
-         $new_month = 0;
-      $new_year  = 0;
-      }   
+	if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+	    $new_oid = $_POST['time_oid'];
+	    $occupancy_plan_id = $new_oid;
+	} else {
+	    $new_oid = -1;
+	}
 
-      if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
-         $new_month = $_POST['time_month_next'];
-      } else {
-         $new_month = 0;
-         $new_year  = 0;
-      }
+	if ($new_month == 0) {
+	    $zeit = localtime(time(), 1);
+	} else {
+	    $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+	}
+    } elseif ((isset($_POST['next_cal'])) && (!empty($_POST['next_cal']))) {
+	if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
+	    $new_year = $_POST['time_year_next'];
+	} else {
+	    $new_month = 0;
+	    $new_year  = 0;
+	}
 
-      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
-         $new_oid = $_POST['time_oid'];
-      } else {
-         $new_oid = -1;
-      }
+	if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
+	    $new_month = $_POST['time_month_next'];
+	} else {
+	    $new_month = 0;
+	    $new_year  = 0;
+	}
 
-      if ($new_month == 0) {
-        $zeit = localtime(time(), 1);
-      } else {
-        $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
-      }         
-   } else {
-      if ((isset($_POST['time_year_norm'])) && (!empty($_POST['time_year_norm']))) {
-         $new_year = $_POST['time_year_norm'];
-      } else {
-         $new_year = 0;
-      }
-      if ((isset($_POST['time_month_norm'])) && (!empty($_POST['time_month_norm']))) {
-         $new_month = $_POST['time_month_norm'];
-      } else {
-         $new_month = 0;
-         $new_year  = 0;
-      }
-      if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
-         $next_month = $_POST['time_month_next'];
-      } else {
-         $next_month = 0;
-      }
-      if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
-         $next_year = $_POST['time_year_next'];
-      } else {
-         $next_year = 0;
-      }
+	if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
+	    $new_oid = $_POST['time_oid'];
+	    $occupancy_plan_id = $new_oid;
+	} else {
+	    $new_oid = -1;
+	}
 
-      if ($new_month == 0) {
-        $zeit = localtime(time(), 1);
-      } else {
-        $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
-      }   
-   
-       if ((isset($_POST['occupancy_plan_day'])) && (!empty($_POST['occupancy_plan_day']))) {
-          $occupancy_plan_days = $_POST['occupancy_plan_day'];
-       }
-       if ((isset($_POST['occupancy_plan_id'])) && (!empty($_POST['occupancy_plan_id']))) {
-          $occupancy_plan_id   = $_POST['occupancy_plan_id'];
-       }
-       if ((isset($_POST['occupancy_plan_name'])) && (!empty($_POST['occupancy_plan_name']))) {
-          $occupancy_plan_name = $_POST['occupancy_plan_name'];  
-       }
-       if ((isset($_POST['occupancy_plan_action'])) && (!empty($_POST['occupancy_plan_action']))) {
-          $action               = $_POST['occupancy_plan_action'];
-       }
-       if ((isset($action)) && (!empty($action))) {
-          if ($action == 'update_occupancy_plan') {
-             $zeit_von = date("Y-m-d", mktime(0,0,0,$new_month,1,$new_year));
-             $zeit_bis = date("Y-m-d", mktime(0,0,0,$next_month, 0, $next_year));
-             $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id, $zeit_von, $zeit_bis);
-           if (isset($occupancy_plan_name)) {
-                $dbg_str = '<div class="updated"><p><strong>'.
-                        htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name)).
-                      '</strong></p></div>'."\n";
-           } else {
-                $dbg_str = '<div class="updated"><p><strong>'.
-                         htmlentities(__('The Changes has been adopted!', 'occupancyplan')).'</strong></p></div>'."\n";       
-           }
-          } elseif ($action == 'change_occupancy_plan') {
-             //
-          } elseif ($action == 'settings') {
-             $tmpid = -1;
-             include_once('occupancy_plan_classes.php');
-             $tmp = new occupancy_plan_Settings($tmpid);
-             $newSettings      = $tmp->default_values;
-             foreach ($newSettings as $key => $value) {
-                $tmp               = $_POST[$key];
-                if (isset($tmp)) {
-                   $newSettings[$key] = $tmp;
-                }
-             }
-             if (isset($occupancy_plan_id)) {
-                update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
-               $dbg_str = '<div class="updated"><p><strong>'.
-                         htmlentities(sprintf(__('Options [%s] successfully saved!', 'occupancyplan'),$occupancy_plan_name)).
-                      '</strong></p></div>'."\n";
-             }
-          } elseif ($action == 'add_occupancy_plan') {
-             $occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
-             if ($occupancy_plan_id == -1){
-                $dbg_str = '<div class="updated"><p><strong>'.
-                        htmlentities(sprintf(__('A Object with Name [%s] already exists!', 'occupancyplan'),$occupancy_plan_name)).
-                      '</strong></p></div>'."\n";
-              $occupancy_plan_id = 1;
-             }
-          } elseif ($action == 'del_occupancy_plan') {   
-             $occupancy_plan_id   = delete_occupancy_plan($occupancy_plan_id);
-            if ($occupancy_plan_id == -1){
-               $occupancy_plan_id = 1;
-              include_once('occupancy_plan_classes.php');
-               $tmp = new occupancy_plan_Settings($occupancy_plan_id);
-               $dbg_str = '<div class="updated"><p><strong>'.
-                        htmlentities(sprintf(__('The first Object [%s] can not be deleted!', 'occupancyplan'),$tmp->occupancy_plan_name)).
-                      '</strong></p></div>'."\n";
-           
-             } else {
-                $dbg_str = '<div class="updated"><p><strong>'.
-                         htmlentities(sprintf(__('The Object [%s] successfully deleted!', 'occupancyplan'),$occupancy_plan_name)).
-                      '</strong></p></div>'."\n";     
-            }
-          }  
+	if ($new_month == 0) {
+	    $zeit = localtime(time(), 1);
+	} else {
+	    $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+	}
+    } else {
+	if ((isset($_POST['time_year_norm'])) && (!empty($_POST['time_year_norm']))) {
+	    $new_year = $_POST['time_year_norm'];
+	} else {
+	    $new_year = 0;
+	}
+	if ((isset($_POST['time_month_norm'])) && (!empty($_POST['time_month_norm']))) {
+	    $new_month = $_POST['time_month_norm'];
+	} else {
+	    $new_month = 0;
+	    $new_year  = 0;
+	}
+	if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
+	    $next_month = $_POST['time_month_next'];
+	} else {
+	    $next_month = 0;
+	}
+	if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
+	    $next_year = $_POST['time_year_next'];
+	} else {
+	    $next_year = 0;
+	}
+
+	if ($new_month == 0) {
+	    $zeit = localtime(time(), 1);
+	} else {
+	    $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
+	}
+
+	if ((isset($_POST['occupancy_plan_day'])) && (!empty($_POST['occupancy_plan_day']))) {
+	    $occupancy_plan_days = $_POST['occupancy_plan_day'];
+	}
+	if ((isset($_POST['occupancy_plan_id'])) && (!empty($_POST['occupancy_plan_id']))) {
+	    $occupancy_plan_id   = $_POST['occupancy_plan_id'];
+	}
+	if ((isset($_POST['occupancy_plan_name'])) && (!empty($_POST['occupancy_plan_name']))) {
+	    $occupancy_plan_name = $_POST['occupancy_plan_name'];  
+	}
+	if ((isset($_POST['occupancy_plan_action'])) && (!empty($_POST['occupancy_plan_action']))) {
+	    $action               = $_POST['occupancy_plan_action'];
+	}
+	if ((isset($action)) && (!empty($action))) {
+	    if ($action == 'update_occupancy_plan') {
+		$zeit_von = date("Y-m-d", mktime(0,0,0,$new_month,1,$new_year));
+		$zeit_bis = date("Y-m-d", mktime(0,0,0,$next_month, 0, $next_year));
+		$occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id, $zeit_von, $zeit_bis);
+		if (isset($occupancy_plan_name)) {
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name)).
+				'</strong></p></div>'."\n";
+		} else {
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(__('The Changes has been adopted!', 'occupancyplan')).'</strong></p></div>'."\n";
+		}
+	    } elseif ($action == 'change_occupancy_plan') {
+		//
+	    } elseif ($action == 'settings') {
+		$tmpid = -1;
+		include_once('occupancy_plan_classes.php');
+		$tmp = new occupancy_plan_Settings($tmpid);
+		$newSettings      = $tmp->default_values;
+		foreach ($newSettings as $key => $value) {
+		    $tmp               = $_POST[$key];
+		    if (isset($tmp)) {
+			$newSettings[$key] = $tmp;
+		    }
+		}
+		if (isset($occupancy_plan_id)) {
+		    update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(sprintf(__('Options [%s] successfully saved!', 'occupancyplan'),$occupancy_plan_name)).
+				'</strong></p></div>'."\n";
+		}
+	    } elseif ($action == 'add_occupancy_plan') {
+		$occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
+		if ($occupancy_plan_id == -1){
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(sprintf(__('A Object with Name [%s] already exists!', 'occupancyplan'),$occupancy_plan_name)).
+				'</strong></p></div>'."\n";
+		    $occupancy_plan_id = 1;
+		}
+	    } elseif ($action == 'del_occupancy_plan') {   
+		$occupancy_plan_id   = delete_occupancy_plan($occupancy_plan_id);
+		if ($occupancy_plan_id == -1){
+		    $occupancy_plan_id = 1;
+		    include_once('occupancy_plan_classes.php');
+		    $tmp = new occupancy_plan_Settings($occupancy_plan_id);
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(sprintf(__('The first Object [%s] can not be deleted!', 'occupancyplan'),$tmp->occupancy_plan_name)).
+				'</strong></p></div>'."\n";
+		} else {
+		    $dbg_str =	'<div class="updated"><p><strong>'.
+				htmlentities(sprintf(__('The Object [%s] successfully deleted!', 'occupancyplan'),$occupancy_plan_name)).
+				'</strong></p></div>'."\n";     
+		}
+	    }
+	}
     }
-   }
 ?>
   <div class="wrap">
       <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>

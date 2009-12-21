@@ -4,7 +4,7 @@ Donate link: http://www.gods4u.de/sponsoren/
 Tags: occupancy plan, occupancyplan, occupancy, Belegungsplan, Belegungsuebersicht, Ferienwohnung, Ferienhaus, Kalender
 Requires at least: 2.7.1 works only with !! PHP5 !!
 Tested up to: 2.9
-Stable tag: 1.0.2.1
+Stable tag: 1.0.2.2
 
 Occupancy Plan ist ein einfaches Plugin fuer Wordpress, das eine Uebersicht von z.B. belegten Ferienwohnungen oder Ferienhaeuser kalendarisch anzeigt.
 
@@ -56,3 +56,6 @@ Bitte stellt sicher, dass auf eurem Server PHP ab Version 5 läuft.
 -   1.0.2.1
    <p>Aktualisieren von Buchungen funktioniert jetzt</p>
    <p></p>
+-   1.0.2.2
+   <p>Eintragen von Buchungen bei weiteren Plaenen funktioniert ab dieser Version.</p>
+   <p>Vor- und Zurueck-Button im Dashboard funktioniert bei jedem Kalender</p>
