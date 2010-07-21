@@ -95,7 +95,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("<? _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
+         alert("<?php _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -124,7 +124,7 @@ function add_adm_css() {
        }   */
      }
 </script>
-<?
+<?php
    $url = get_bloginfo('wpurl');
    echo '<link rel="stylesheet" href="' . $url . '/wp-content/plugins/occupancyplan/occupancy_plan_adm.css" type="text/css" media="screen" />';
 }
@@ -380,8 +380,8 @@ function occupancy_plan_option_page() {
     }
 ?>
   <div class="wrap">
-      <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>
-<?
+      <h2><?php _e('Occupancyplan', 'occupancyplan');?></h2>
+<?php
    if (isset($dbg_str)) {
       echo $dbg_str;
    }
