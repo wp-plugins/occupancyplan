@@ -131,6 +131,9 @@ function add_adm_css() {
 
 add_filter('the_content', 'occupancy_plan_check_output');
 
+// WidgetObject, allows multiple instances of the widget
+require_once('occupancy_plan_widget.php');
+
 function occupancy_plan_check_output($content) {
    if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
       if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
@@ -390,7 +393,7 @@ function occupancy_plan_option_page() {
    echo $getOutput->view($zeit);   
 ?>
   </div>
-<?php  
+<?php
 } // end function occupancy_plan_option_page()
 
 function add_occupancy_plan($occupancy_plan_name) {
@@ -445,9 +448,16 @@ function update_occupancy_plan_settings($oid, $occupancy_plan_name, $newSettings
    global $wpdb;
 
    foreach ($newSettings as $key => $value) {
-      $sql  = "UPDATE ".$wpdb->prefix."belegung_config set ";
-      $sql .= " bc_wert = '".$value."' ";
-      $sql .= " WHERE bc_name = '".$key."' and bc_objekt_id = ".$oid;
+      $sql = "SELECT bc_wert from ".$wpdb->prefix."belegung_config WHERE bc_name = '".$key."' and bc_objekt_id = ".$oid;
+      $result_daten = $wpdb->get_results($sql);
+      if (empty($result_daten)) {
+         $sql  = "INSERT INTO ".$wpdb->prefix."belegung_config (bc_wert, bc_name, bc_objekt_id) ";
+         $sql .= " VALUES('".$value."', '".$key."', ".$oid.");";
+      } else {
+         $sql  = "UPDATE ".$wpdb->prefix."belegung_config set ";
+         $sql .= " bc_wert = '".$value."' ";
+         $sql .= " WHERE bc_name = '".$key."' and bc_objekt_id = ".$oid;
+      }
       $wpdb->query($sql);
    }   
 
