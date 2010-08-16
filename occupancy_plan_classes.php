@@ -717,11 +717,11 @@ class occupancy_plan_WidgetCls
          $jahr_j = 1900 + $zeit['tm_year'];
          $mymonth = $zeit['tm_mon'];
          $mymonth++;
-	 
+
          $jahr_norm = $jahr_j;
          $mymonth_norm = $mymonth;
 
-         $zeit_prev = mktime(0,0,0,$mymonth - $settings->number_month, 1, $jahr_j);
+         $zeit_prev = mktime(0,0,0,$mymonth - 1, 1, $jahr_j);
 
          $d = 0;
          for($z = 1; $z <= 1; $z++) {
