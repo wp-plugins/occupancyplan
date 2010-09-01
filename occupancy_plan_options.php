@@ -95,7 +95,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("<?php _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
+         alert("<? _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -166,9 +166,8 @@ function occupancy_plan_check_output($content) {
          $new_year = $_POST['time_year_next'];
       } else {
          $new_month = 0;
-      $new_year  = 0;
+         $new_year  = 0;
       }   
-
       if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
          $new_month = $_POST['time_month_next'];
       } else {
@@ -179,6 +178,7 @@ function occupancy_plan_check_output($content) {
       $new_month = 0;
       $new_year = 0;
    }
+
    if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
       $new_oid = $_POST['time_oid'];
    } else {
@@ -188,7 +188,8 @@ function occupancy_plan_check_output($content) {
       $zeit = localtime(time(), 1);
    } else {
       $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
-   }   
+   }
+
    $text = '<!-- belegungsplan ';
    $pos = strpos($content, $text);
    while ($pos !== FALSE) {
@@ -201,14 +202,12 @@ function occupancy_plan_check_output($content) {
                 $content = preg_replace('/<p>\s*<!--(.*)-->\s*<\/p>/i', "<!--$1-->", $content);
                 include_once("occupancy_plan.php");
                 $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid, $zeit), $content);
-                $content .= "<!-- $new_month + $new_year -->";
 	    }	 
 	 } else {
             if (strpos($content, $text.$oid.' -->') !== FALSE) {
                 $content = preg_replace('/<p>\s*<!--(.*)-->\s*<\/p>/i', "<!--$1-->", $content);
                 include_once("occupancy_plan.php");
                 $content = str_replace($text.$oid.' -->', print_occupancy_plan_view($oid, localtime(time(), 1)), $content);
-                $content .= "<!-- $new_month + $new_year + ".date("d.n.Y", mktime(0,0,0,$new_month - 2, 1, $new_year))."-->";
 	    }
          }
       }
@@ -383,8 +382,8 @@ function occupancy_plan_option_page() {
     }
 ?>
   <div class="wrap">
-      <h2><?php _e('Occupancyplan', 'occupancyplan');?></h2>
-<?php
+      <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>
+<?
    if (isset($dbg_str)) {
       echo $dbg_str;
    }
@@ -393,7 +392,7 @@ function occupancy_plan_option_page() {
    echo $getOutput->view($zeit);   
 ?>
   </div>
-<?php
+<?php  
 } // end function occupancy_plan_option_page()
 
 function add_occupancy_plan($occupancy_plan_name) {

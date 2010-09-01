@@ -188,6 +188,7 @@ class occupancy_plan_Output
    
    public function view($zeit) {
       global $wpdb;
+      $ausgabe = '';
 
       // check if occupancy_Plan_ID exists
       $bFound = FALSE;
@@ -203,9 +204,8 @@ class occupancy_plan_Output
       }
 
       if ($bFound === FALSE) {
-         $ausgabe = '<!--- belegungsplan '.$this->occupancy_Plan_ID.' -->';
+         $ausgabe .= '<!--- belegungsplan '.$this->occupancy_Plan_ID.' -->';
       } else {
-         $ausgabe   = '';
          $error_str = '';
          if (!isset($this->occupancy_Plan_ID)){
             $this->occupancy_Plan_ID = 1;
@@ -375,7 +375,7 @@ class occupancy_plan_Output
          $jahr_j = 1900 + $zeit['tm_year'];
          $mymonth = $zeit['tm_mon'];
          $mymonth++;
-	 
+
          $jahr_norm = $jahr_j;
          $mymonth_norm = $mymonth;
 
@@ -388,6 +388,7 @@ class occupancy_plan_Output
                $jahr_j++;
             }
             $d++;
+
             //if ($d > 3) {
             if ($d > $settings->view_columns) {
                $ausgabe .= "    </tr>\n";
@@ -466,7 +467,7 @@ class occupancy_plan_Output
          $ausgabe .= '            <tr>'."\n";
          $ausgabe .= '              <td style="text-align:left;">'."\n";                     
          if ($this->IsAdmin === FALSE) {	 
-            $ausgabe .= '      <form name="prev_next" method="post" action="#occuplan'.$this->occupancy_Plan_ID.'">'."\n";	 
+            $ausgabe .= '      <form name="prev_next'.$this->occupancy_Plan_ID.'" method="post" action="#occuplan'.$this->occupancy_Plan_ID.'">'."\n";	 
          } 
          $ausgabe .= '        <input class="button" type="submit" name="prev_cal" value="&lt;" />'."\n";
          $ausgabe .= '        <input type="hidden" name="time_year" value="'.date("Y", $zeit_prev).'" />'."\n";
@@ -478,10 +479,11 @@ class occupancy_plan_Output
          $ausgabe .= '              </td>'."\n";
          $ausgabe .= '              <td style="text-align:right;">'."\n";
          if ($this->IsAdmin === FALSE) {	 
-            $ausgabe .= '      <form name="prev_next" method="post" action="#occuplan'.$this->occupancy_Plan_ID.'">'."\n";	 
+            $ausgabe .= '      <form name="prev_next'.$this->occupancy_Plan_ID.'" method="post" action="#occuplan'.$this->occupancy_Plan_ID.'">'."\n";	 
          }         
          $ausgabe .= '        <input type="hidden" name="time_year_next" value="'.$jahr_j.'" />'."\n";
          $ausgabe .= '        <input type="hidden" name="time_month_next" value="'.$mymonth.'" />'."\n";
+         $ausgabe .= '        <input type="hidden" name="time_oid" value="'.$this->occupancy_Plan_ID.'" />'."\n";
          if ($this->IsAdmin === TRUE) {	 	 
             $ausgabe .= '        <input type="hidden" name="time_month_norm" value="'.$mymonth_norm.'" />'."\n";
             $ausgabe .= '        <input type="hidden" name="time_year_norm" value="'.$jahr_norm.'" />'."\n";	    
@@ -717,7 +719,7 @@ class occupancy_plan_WidgetCls
          $jahr_j = 1900 + $zeit['tm_year'];
          $mymonth = $zeit['tm_mon'];
          $mymonth++;
-
+	 
          $jahr_norm = $jahr_j;
          $mymonth_norm = $mymonth;
 
@@ -787,17 +789,17 @@ class occupancy_plan_WidgetCls
          $ausgabe .= '        </td>'."\n";
          $ausgabe .= '      </tr>'."\n";         
          $ausgabe .= '      <tr>'."\n";
-         $ausgabe .= '      <form name="prev_next" method="post" action="#calendarwdg'.$this->occupancy_Plan_ID.'">'."\n";	 
+         $ausgabe .= '      <form name="wdg_prev_next" method="post" action="#calendarwdg'.$this->occupancy_Plan_ID.'">'."\n";	 
          $ausgabe .= '        <td style="text-align:left;">'."\n";	 
-         $ausgabe .= '        <input class="button" type="submit" name="prev_cal" value="&lt;" />'."\n";
-         $ausgabe .= '        <input type="hidden" name="time_year" value="'.date("Y", $zeit_prev).'" />'."\n";
-         $ausgabe .= '        <input type="hidden" name="time_month" value="'.date("n", $zeit_prev).'" />'."\n";
-         $ausgabe .= '        <input type="hidden" name="time_oid" value="'.$this->occupancy_Plan_ID.'" />'."\n";
+         $ausgabe .= '        <input class="button" type="submit" name="wdg_prev_cal" value="&lt;" />'."\n";
+         $ausgabe .= '        <input type="hidden" name="wdg_time_year" value="'.date("Y", $zeit_prev).'" />'."\n";
+         $ausgabe .= '        <input type="hidden" name="wdg_time_month" value="'.date("n", $zeit_prev).'" />'."\n";
+         $ausgabe .= '        <input type="hidden" name="wdg_time_oid" value="'.$this->occupancy_Plan_ID.'" />'."\n";
          $ausgabe .= '        </td>'."\n";
          $ausgabe .= '        <td style="text-align:right;">'."\n";
-         $ausgabe .= '        <input class="button" type="submit" name="next_cal" value="&gt;" />'."\n";	 	 
-         $ausgabe .= '        <input type="hidden" name="time_year_next" value="'.$jahr_j.'" />'."\n";
-         $ausgabe .= '        <input type="hidden" name="time_month_next" value="'.$mymonth.'" />'."\n";
+         $ausgabe .= '        <input class="button" type="submit" name="wdg_next_cal" value="&gt;" />'."\n";	 	 
+         $ausgabe .= '        <input type="hidden" name="wdg_time_year_next" value="'.$jahr_j.'" />'."\n";
+         $ausgabe .= '        <input type="hidden" name="wdg_time_month_next" value="'.$mymonth.'" />'."\n";
          $ausgabe .= '        </td>'."\n";
          $ausgabe .= '      </form>'."\n";	 
          $ausgabe .= '      </tr>'."\n";

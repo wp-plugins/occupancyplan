@@ -30,23 +30,23 @@ class occupancy_plan_widget extends WP_Widget {
       $oid = $instance['oid'];
       $table_width = $instance['table_width'];
       
-      if ((isset($_POST['prev_cal'])) && (!empty($_POST['prev_cal']))) {
-         if ((isset($_POST['time_year'])) && (!empty($_POST['time_year']))) {
-            $new_year = $_POST['time_year'];
+      if ((isset($_POST['wdg_prev_cal'])) && (!empty($_POST['wdg_prev_cal']))) {
+         if ((isset($_POST['wdg_time_year'])) && (!empty($_POST['wdg_time_year']))) {
+            $new_year = $_POST['wdg_time_year'];
          } else {
             $new_month = 0;
             $new_year  = 0;
          }   
 
-         if ((isset($_POST['time_month'])) && (!empty($_POST['time_month']))) {
-            $new_month = $_POST['time_month'];
+         if ((isset($_POST['wdg_time_month'])) && (!empty($_POST['wdg_time_month']))) {
+            $new_month = $_POST['wdg_time_month'];
          } else {
             $new_month = 0;
             $new_year  = 0;
          }
    
-         if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
-            $new_oid = $_POST['time_oid'];
+         if ((isset($_POST['wdg_time_oid'])) && (!empty($_POST['wdg_time_oid']))) {
+            $new_oid = $_POST['wdg_time_oid'];
          } else {
             $new_oid = -1;
          }
@@ -56,16 +56,16 @@ class occupancy_plan_widget extends WP_Widget {
          } else {
             $zeit = localtime(mktime(0,0,0,$new_month, 1, $new_year), 1);
          }
-      } elseif ((isset($_POST['next_cal'])) && (!empty($_POST['next_cal']))) {
-         if ((isset($_POST['time_year_next'])) && (!empty($_POST['time_year_next']))) {
-            $new_year = $_POST['time_year_next'];
+      } elseif ((isset($_POST['wdg_next_cal'])) && (!empty($_POST['wdg_next_cal']))) {
+         if ((isset($_POST['wdg_time_year_next'])) && (!empty($_POST['wdg_time_year_next']))) {
+            $new_year = $_POST['wdg_time_year_next'];
          } else {
             $new_month = 0;
             $new_year  = 0;
          }   
 
-         if ((isset($_POST['time_month_next'])) && (!empty($_POST['time_month_next']))) {
-            $new_month = $_POST['time_month_next'];
+         if ((isset($_POST['wdg_time_month_next'])) && (!empty($_POST['wdg_time_month_next']))) {
+            $new_month = $_POST['wdg_time_month_next'];
          } else {
             $new_month = 0;
             $new_year  = 0;
@@ -74,8 +74,8 @@ class occupancy_plan_widget extends WP_Widget {
          $new_month = 0;
          $new_year = 0;
       }
-      if ((isset($_POST['time_oid'])) && (!empty($_POST['time_oid']))) {
-         $new_oid = $_POST['time_oid'];
+      if ((isset($_POST['wdg_time_oid'])) && (!empty($_POST['wdg_time_oid']))) {
+         $new_oid = $_POST['wdg_time_oid'];
       } else {
          $new_oid = -1;
       }
