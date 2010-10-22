@@ -108,7 +108,7 @@ function add_adm_css() {
 
      function chkFormular () {
        if (document.frm_options.number_month.value == "") {
-         alert("<? _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
+         alert("<?php _e('Please enter a Number between 1-100!', 'occupancyplan');?>");
          document.frm_options.number_month.focus();
          return false;
        }
@@ -244,8 +244,8 @@ function occupancy_plan_option_page() {
     if ((isset($_GET['phpinfo'])) && (!empty($_GET['phpinfo']))) {
 ?>
   <div class="wrap">
-      <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>
-<?
+      <h2><?php _e('Occupancyplan', 'occupancyplan');?></h2>
+<?php
 	ob_start();
 	phpinfo();
 	$phpinfo = ob_get_contents();
@@ -409,8 +409,8 @@ function occupancy_plan_option_page() {
 	}
 ?>
   <div class="wrap">
-      <h2><? _e('Occupancyplan', 'occupancyplan');?></h2>
-<?
+      <h2><?php _e('Occupancyplan', 'occupancyplan');?></h2>
+<?php
    if (isset($dbg_str)) {
       echo $dbg_str;
    }
