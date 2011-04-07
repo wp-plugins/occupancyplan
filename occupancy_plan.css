@@ -1,0 +1,92 @@
+#content table {
+    border: none;
+}
+
+.occupancy_aussen {
+    padding: 0px 0px 0px 0px;
+    border-spacing: 5px;
+    border-collapse: separate;
+}
+
+.occupancy_aussen table {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px !important;
+}
+
+.occupancy_aussen tr, td {
+    padding: 0px !important;
+    margin: 0px;
+    border: none !important;
+}
+
+.occupancy_kalender {
+    font-weight: normal;
+    font-size: 10px;
+    font-family: arial,helvetica,sans-serif;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-collapse: separate !important;
+    border-spacing: 1px; 
+}
+
+.occupancy_kalender table {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.occupancy_kalender tr {
+    height: 10px !important;
+    padding: 0px !important;
+}
+
+.occupancy_kalender th {
+    text-align: left;
+    padding: 0px 0px 0px 3px !important;
+    margin: 0px !important;
+    border-spacing: 1px !important;
+}
+
+.occupancy_kalender td {
+    text-align: center;
+    width: 14%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.unknown_  {
+    border-style: none !important;
+    /* display: none;  */
+}
+
+.occupancy_btns {
+    border-style: none !important;
+    /* display: none;  */
+}
+
+.submit input,
+.button,
+#postcustomstuff .submit input {
+    text-decoration: none;
+    font-size: 11px !important;
+    line-height: 16px;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 11px;
+    -khtml-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -khtml-box-sizing: content-box;
+    box-sizing: content-box;
+    }
+
+a.button {
+    line-height: 1.2em;
+    -webkit-border-radius: 10px;
+    padding: 4px 10px;
+    white-space: nowrap;
+}
