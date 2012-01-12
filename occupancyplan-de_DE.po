@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
 "POT-Creation-Date: 2010-08-10 23:45+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Peter Welz <wordpress@gods4u.de>\n"
+"Last-Translator: Ralph Stenzel <ralph@klein-aber-fein.de>\n"
 "Language-Team: Welz, Peter <wordpress@gods4u.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -19,43 +19,43 @@ msgstr "Name ändern"
 
 #: occupancy_plan_classes.php:5
 msgid "Textcolor default"
-msgstr "Textfarbe Standard"
+msgstr "Textfarbe Standard:"
 
 #: occupancy_plan_classes.php:6
 msgid "Bordercolor"
-msgstr "Rahmenfarbe"
+msgstr "Rahmenfarbe:"
 
 #: occupancy_plan_classes.php:7
 msgid "Backgroundcolor days default"
-msgstr "Hintergrundfarbe Tage Standard"
+msgstr "Hintergrundfarbe Tage Standard:"
 
 #: occupancy_plan_classes.php:8
 msgid "Tablecolor days of week"
-msgstr "Tabellenfarbe Wochentage"
+msgstr "Tabellenfarbe Wochentage:"
 
 #: occupancy_plan_classes.php:9
 msgid "Tablecolor Header"
-msgstr "Tabellenfarbe Kopf"
+msgstr "Tabellenfarbe Kopf:"
 
 #: occupancy_plan_classes.php:10
 msgid "Textcolor Holiday"
-msgstr "Textfarbe Feiertage"
+msgstr "Textfarbe Feiertage:"
 
 #: occupancy_plan_classes.php:11
 msgid "Textcolor current day"
-msgstr "Textfarbe aktueller Tag"
+msgstr "Textfarbe aktueller Tag:"
 
 #: occupancy_plan_classes.php:12
 msgid "Backgroundcolor empty days"
-msgstr "Hintergrundfarbe leere Tage"
+msgstr "Hintergrundfarbe leere Tage:"
 
 #: occupancy_plan_classes.php:13
 msgid "Backgroundcolor occupied days"
-msgstr "Hintergrundfarbe belegte Tage"
+msgstr "Hintergrundfarbe belegte Tage:"
 
 #: occupancy_plan_classes.php:14
 msgid "Viewwidth in pixel"
-msgstr "Ansichtsbreite in Pixel"
+msgstr "Ansichtsbreite in Pixel:"
 
 #: occupancy_plan_classes.php:15
 msgid "Viewtext"
@@ -63,7 +63,7 @@ msgstr "Ansichtstext"
 
 #: occupancy_plan_classes.php:16
 msgid "Count of month to view"
-msgstr "Anzahl Monate zum anzeigen"
+msgstr "Anzahl Monate"
 
 #: occupancy_plan_classes.php:17
 msgid "Count of columns to view"
@@ -159,33 +159,33 @@ msgstr "%s existiert nicht."
 #: occupancy_plan_classes.php:216
 #, php-format
 msgid "There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same."
-msgstr "Es gibt die Möglichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht eingeräumt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s müssen aber erhalten bleiben."
+msgstr "Es gibt die Möglichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15,00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht eingeräumt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s müssen aber erhalten bleiben."
 
 #: occupancy_plan_classes.php:222
 #, php-format
 msgid "Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR)."
-msgstr "Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20.00 EUR)."
+msgstr "Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20,00 EUR)."
 
 #: occupancy_plan_classes.php:225
 msgid "Thus the plug is then completely free of advertising."
-msgstr "Damit ist das Plugin dann völlig Werbefrei."
+msgstr "Damit ist das Plugin dann völlig werbefrei."
 
 #: occupancy_plan_classes.php:227
 msgid "Invoices are issued for both licenses. VAT will not be shown here."
-msgstr "Für beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird."
+msgstr "Für beide Lizenzen werden auch Rechnungen ausgestellt, wobei die Mehrwertsteuer nicht ausgewiesen wird."
 
 #: occupancy_plan_classes.php:231
 #, php-format
 msgid "To purchase any of these additional licenses, register via email. (%s)"
-msgstr "Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)"
+msgstr "Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir (%s)."
 
 #: occupancy_plan_classes.php:237
 msgid "To view the Overview, insert following text to page:"
-msgstr "Zum anzeigen der Übersicht füge folgenden Text in die Seite ein:"
+msgstr "Zum Anzeigen der Übersicht füge folgenden Text in die Seite ein:"
 
 #: occupancy_plan_classes.php:256
 msgid "Select Overview"
-msgstr "Übersicht auswählen"
+msgstr "Übersicht auswählen:"
 
 #: occupancy_plan_classes.php:260
 msgid "Select"
@@ -213,11 +213,11 @@ msgstr "Name ändern:"
 
 #: occupancy_plan_classes.php:307
 msgid "Headline"
-msgstr "Überschrift"
+msgstr "Überschrift:"
 
 #: occupancy_plan_classes.php:312
 msgid "Count of month:"
-msgstr "Anzahl Monate zum anzeigen:"
+msgstr "Anzahl Monate:"
 
 #: occupancy_plan_classes.php:317
 msgid "Count of columns:"
@@ -237,7 +237,7 @@ msgstr "Aktualisieren"
 #: occupancy_plan_classes.php:915
 #: occupancy_plan_classes.php:919
 msgid "busy"
-msgstr "besetzt"
+msgstr "belegt"
 
 #: occupancy_plan_classes.php:610
 #: occupancy_plan_classes.php:903
@@ -246,7 +246,7 @@ msgstr "heute"
 
 #: occupancy_plan_options.php:98
 msgid "Please enter a Number between 1-100!"
-msgstr "Bitte gebe eine Nummer zwischen 1-100 ein!"
+msgstr "Bitte gebe eine Nummer zwischen 1 und 100 ein!"
 
 #: occupancy_plan_options.php:110
 #, php-format
@@ -255,11 +255,11 @@ msgstr "\\\"%s\\\" gebe eine Nummer ein!"
 
 #: occupancy_plan_options.php:110
 msgid "count of month"
-msgstr "Anzahl Monate zum anzeigen"
+msgstr "Anzahl Monate"
 
 #: occupancy_plan_options.php:116
 msgid "Please enter a Number between 1-100"
-msgstr "Bitte gebe eine Nummer zwischen 1-100 ein!"
+msgstr "Bitte gebe eine Nummer zwischen 1 und 100 ein!"
 
 #: occupancy_plan_options.php:223
 msgid "Occupancyplan-Plugin"

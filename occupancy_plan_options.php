@@ -3,7 +3,7 @@
 Plugin Name: occupancyplan
 Plugin URI: http://www.gods4u.de/wp-plugin-occupancyplan/
 Description: occupancy plan for Wordpress
-Version: 1.0.2.3
+Version: 1.0.2.4
 Author: Peter Welz
 Author URI: http://www.gods4u.de/
 Text Domain: occupancyplan
