@@ -1,40 +1,41 @@
 <?php
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
-define('chgname', htmlentities(__("Change Name", 'occupancyplan')));
-define('c_color_def', htmlentities(__("Textcolor default", 'occupancyplan')));
-define('c_color_tabborder', htmlentities(__("Bordercolor", 'occupancyplan')));
-define('c_color_tabinner', htmlentities(__("Backgroundcolor days default", 'occupancyplan')));
-define('c_color_tabinnerDays', htmlentities(__("Tablecolor days of week", 'occupancyplan')));
-define('c_color_tabhead', htmlentities(__("Tablecolor Header", 'occupancyplan')));
-define('c_color_holiday', htmlentities(__("Textcolor Holiday", 'occupancyplan')));
-define('c_color_today', htmlentities(__("Textcolor current day", 'occupancyplan')));
-define('c_color_nildays', htmlentities(__("Backgroundcolor empty days", 'occupancyplan')));
-define('c_color_assigned', htmlentities(__("Backgroundcolor occupied days", 'occupancyplan')));
-define('c_main_with', htmlentities(__("Viewwidth in pixel", 'occupancyplan')));
-define('c_heading', htmlentities(__("Viewtext", 'occupancyplan')));
-define('c_number_month', htmlentities(__("Count of month to view", 'occupancyplan')));
-define('c_view_columns', htmlentities(__("Count of columns to view", 'occupancyplan')));
+define('chgname', htmlentities(__("Change Name", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_def', htmlentities(__("Textcolor default", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_tabborder', htmlentities(__("Bordercolor", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_tabinner', htmlentities(__("Backgroundcolor days default", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_tabinnerDays', htmlentities(__("Tablecolor days of week", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_tabhead', htmlentities(__("Tablecolor Header", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_holiday', htmlentities(__("Textcolor Holiday", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_today', htmlentities(__("Textcolor current day", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_nildays', htmlentities(__("Backgroundcolor empty days", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_color_assigned', htmlentities(__("Backgroundcolor occupied days", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_main_with', htmlentities(__("Viewwidth in pixel", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_heading', htmlentities(__("Viewtext", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_number_month', htmlentities(__("Count of month to view", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_view_columns', htmlentities(__("Count of columns to view", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_view_past', htmlentities(__("View past", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
 
-define('c_month_01', htmlentities(__("January", 'occupancyplan')));
-define('c_month_02', htmlentities(__("February", 'occupancyplan')));
-define('c_month_03', htmlentities(__("March", 'occupancyplan')));
-define('c_month_04', htmlentities(__("April", 'occupancyplan')));
-define('c_month_05', htmlentities(__("May", 'occupancyplan')));
-define('c_month_06', htmlentities(__("June", 'occupancyplan')));
-define('c_month_07', htmlentities(__("July", 'occupancyplan')));
-define('c_month_08', htmlentities(__("August", 'occupancyplan')));
-define('c_month_09', htmlentities(__("September", 'occupancyplan')));
-define('c_month_10', htmlentities(__("October", 'occupancyplan')));
-define('c_month_11', htmlentities(__("November", 'occupancyplan')));
-define('c_month_12', htmlentities(__("December", 'occupancyplan')));
-define('c_day1', htmlentities(__("Mon", 'occupancyplan')));
-define('c_day2', htmlentities(__("Tue", 'occupancyplan')));
-define('c_day3', htmlentities(__("Wed", 'occupancyplan')));
-define('c_day4', htmlentities(__("Thu", 'occupancyplan')));
-define('c_day5', htmlentities(__("Fri", 'occupancyplan')));
-define('c_day6', htmlentities(__("Sat", 'occupancyplan')));
-define('c_day7', htmlentities(__("Sun", 'occupancyplan')));
+define('c_month_01', htmlentities(__("January", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_02', htmlentities(__("February", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_03', htmlentities(__("March", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_04', htmlentities(__("April", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_05', htmlentities(__("May", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_06', htmlentities(__("June", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_07', htmlentities(__("July", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_08', htmlentities(__("August", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_09', htmlentities(__("September", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_10', htmlentities(__("October", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_11', htmlentities(__("November", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_month_12', htmlentities(__("December", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day1', htmlentities(__("Mon", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day2', htmlentities(__("Tue", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day3', htmlentities(__("Wed", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day4', htmlentities(__("Thu", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day5', htmlentities(__("Fri", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day6', htmlentities(__("Sat", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
+define('c_day7', htmlentities(__("Sun", 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"));
 
 
 class occupancy_plan_Settings
@@ -53,7 +54,8 @@ class occupancy_plan_Settings
       "main_with"             => "507px",
       "heading"               => chgname,
       "number_month"          => "12",
-      "view_columns"          => "3"
+      "view_columns"          => "3",
+      "view_past"             => 1
       );
      
    private $desc = array(
@@ -69,7 +71,8 @@ class occupancy_plan_Settings
       "_main_with"             => c_main_with,
       "_heading"               => c_heading,
       "_number_month"          => c_number_month,
-      "_view_columns"          => c_view_columns
+      "_view_columns"          => c_view_columns,
+      "_view_past"             => c_view_past
       );
      
    private $default_values;
@@ -128,7 +131,7 @@ class occupancy_plan_Settings
             if (array_key_exists($daten->bc_name, $this->values)) {
                $this->values[$daten->bc_name] = $daten->bc_wert;
             } else {
-               exit('<p>'.htmlentities(sprintf(__('%s not exists. please check your database.', 'occupancyplan'),$daten->bc_name)).'</p>');
+               exit('<p>'.htmlentities(sprintf(__('%s not exists. please check your database.', 'occupancyplan'),$daten->bc_name), ENT_COMPAT | ENT_HTML401, "UTF-8").'</p>');
             }
          }
       }
@@ -149,7 +152,7 @@ class occupancy_plan_Settings
          if (array_key_exists($indexname, $this->desc)) {
             return $this->desc[$indexname];
          } else {
-            exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname)).'</p>');
+            exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname), ENT_COMPAT | ENT_HTML401, "UTF-8").'</p>');
          }
       }
       // default properties
@@ -161,7 +164,7 @@ class occupancy_plan_Settings
       } elseif (array_key_exists($indexname, $this->values)) {
          return $this->values[$indexname];
       } else {
-         exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname)).'</p>');
+         exit('<p>'.htmlentities(sprintf(__('%s not exists.', 'occupancyplan'),$indexname), ENT_COMPAT | ENT_HTML401, "UTF-8").'</p>');
       }
    }
 }
@@ -213,29 +216,29 @@ class occupancy_plan_Output
          $settings = new occupancy_plan_Settings($this->occupancy_Plan_ID);
          if ($this->IsAdmin === TRUE) {
             $ausgabe .= '<div class="updated"><strong><p>'."\n";
-            $ausgabe .= sprintf(htmlentities(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan')),
+            $ausgabe .= sprintf(htmlentities(__('There is the possibility of acquiring an additional license (cost: 15.00 EUR). With the acquisition of an additional license is granted %s the right to remove the advertising links below the calendar issue. The copyright and the link to %s must remain the same.', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"),
             /* 'Es gibt die M&ouml;glichkeit, eine Zusatzlizenz zu erwerben (Kosten: 15.00 EUR). Mit dem Erwerb einer Zusatzlizenz wird das Recht einger&auml;mt, %s die Werbelinks unterhalb der Kalenderausgabe zu entfernen. Das Copyright und der Link auf %s muessen aber erhalten bleiben.', 'occupancyplan'), */
 	                        '</p><p>'."\n",
 	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p></strong>\n";
             $ausgabe .= '<strong><p>';
             /* $ausgabe .= sprintf(__('Soll der Hinweis auf %s auch entfernt werden, muss eine erweiterte Zusatzlizenz erworben werden (Kosten: 20.00 EUR).', 'occupancyplan'), */
-            $ausgabe .= sprintf(htmlentities(__('Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR).', 'occupancyplan')),
+            $ausgabe .= sprintf(htmlentities(__('Should the reference to %s will also be removed, you need to buy an extended additional license (cost: 20.00 EUR).', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"),
 	                        '<a href="http://www.gods4u.de" target="_blank">www.gods4u.de</a>')."</p><p>\n";
             /* $ausgabe .= __('Damit ist das Plugin dann voellig Werbefrei.', 'occupancyplan')."</p><p>\n"; */
-            $ausgabe .= htmlentities(__('Thus the plug is then completely free of advertising.', 'occupancyplan'))."</p><p>\n";
+            $ausgabe .= htmlentities(__('Thus the plug is then completely free of advertising.', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8")."</p><p>\n";
             /* $ausgabe .= __('Fuer beide Lizenzen werden auch Rechnungen ausgestellt wobei die Mehrwertsteuer nicht ausgewiesen wird.', 'occupancyplan'); */
-            $ausgabe .= htmlentities(__('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan'));
+            $ausgabe .= htmlentities(__('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8");
             $ausgabe .= '</p></strong>';
             $ausgabe .= '<strong><p>';	    
             /* $ausgabe .= sprintf(__('Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)', 'occupancyplan'), */
-            $ausgabe .= sprintf(htmlentities(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan')),
+            $ausgabe .= sprintf(htmlentities(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8"),
 	                        sprintf('<a href="mailto:wordpress%su.de">wordpress%su.de</a>','@gods4','@gods4'));
             $ausgabe .= '</p></strong>';
             $ausgabe .= '</div>'."\n";
             
             /* $ausgabe .= '<p><strong>'.htmlentities(__('Zum anzeigen der Übersicht folgenden Text in die Seite einfügen:', 'occupancyplan')).'</strong>'   */
-            $ausgabe .= '<p><strong>'.htmlentities(__('To view the Overview, insert following text to page:', 'occupancyplan')).'</strong>';
-            $ausgabe .= htmlentities(' <!-- belegungsplan '.$this->occupancy_Plan_ID.' -->').'</p>'."\n";
+            $ausgabe .= '<p><strong>'.htmlentities(__('To view the Overview, insert following text to page:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'</strong>';
+            $ausgabe .= htmlentities(' <!-- belegungsplan '.$this->occupancy_Plan_ID.' -->', ENT_COMPAT | ENT_HTML401, "UTF-8").'</p>'."\n";
             $listbox = "\t".'<select name="occupancy_plan_id" style="width: 80%;">'."\n";
             $sql = "select bo_description, bo_objekt_id from ".$wpdb->prefix."belegung_objekte;";
             $res = $wpdb->get_results($sql);
@@ -253,11 +256,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Select Overview', 'occupancyplan')).'</td>';
+                        htmlentities(__('Select Overview', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'</td>';
             $ausgabe .= '      <td>'.$listbox.'</td>';
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Select', 'occupancyplan')).'" />';
+                        htmlentities(__('Select', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'" />';
             $ausgabe .= '      </td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>";
@@ -268,11 +271,11 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('delete Overview:', 'occupancyplan')).'</td>';
+                        htmlentities(__('delete Overview:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'</td>';
             $ausgabe .= '      <td>'.$listbox."</td>";
             $ausgabe .= '      <td style="width: 20%;">';
             $ausgabe .= '        <input type="submit" name="objectdelete" class="button-primary" value="'.
-                        htmlentities(__('delete', 'occupancyplan')).'" /></td>'."\n";
+                        htmlentities(__('delete', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'" /></td>'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= $error_str;   
             $ausgabe .= "</table>";
@@ -284,10 +287,10 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= '   <tr style="text-align:left;">'."\n";    
             $ausgabe .= '      <td style="width: 30%;">'.
-                        htmlentities(__('Add new Overview:', 'occupancyplan')).'</td>'."\n";
+                        htmlentities(__('Add new Overview:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'</td>'."\n";
             $ausgabe .= '      <td><input type="text" style="width: 80%" maxlength="50" name="occupancy_plan_name" value=""></td>'."\n";
             $ausgabe .= '      <td style="width: 20%;"><input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('Add', 'occupancyplan')).'" />'."\n";
+                        htmlentities(__('Add', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'" />'."\n";
             $ausgabe .= "   </tr>\n";
             $ausgabe .= "</table>\n";
             $ausgabe .= '<input name="occupancy_plan_action" value="add_occupancy_plan" type="hidden" />'."\n";
@@ -299,27 +302,31 @@ class occupancy_plan_Output
             $ausgabe .= '<table class="widefat" style="border:1px solid #aaaaaa; width:70%;">'."\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Change Overviewname:', 'occupancyplan')).'</td>'."\n";
+                        htmlentities(__('Change Overviewname:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'</td>'."\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="70px" maxlength="50" name="occupancy_plan_name" value="'.$description.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">';
-            $ausgabe .= htmlentities(__('Headline', 'occupancyplan'))."</td>\n";
+            $ausgabe .= htmlentities(__('Headline', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8")."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="80%" maxlength="250" name="heading" value="'.$settings->heading.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Count of month:', 'occupancyplan'))."</td>\n";
+                        htmlentities(__('Count of month:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8")."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="7" maxlength="2" name="number_month" value="'.$settings->number_month.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "       <tr>\n";
             $ausgabe .= '               <td style="width: 25%; text-align: left;">'.
-                        htmlentities(__('Count of columns:', 'occupancyplan'))."</td>\n";
+                        htmlentities(__('Count of columns:', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8")."</td>\n";
             $ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="text" size="7" maxlength="2" name="view_columns" value="'.$settings->view_columns.'"></td>'."\n";
             $ausgabe .= "       </tr>\n";
 
+            $ausgabe .= "       <tr>\n";
+
             $devval = $settings->default_values;
+            $teststr = '<!-- ';
             foreach ($devval as $key => $value) {
+               $teststr .= $key.'='.$value."\n";
                $pos = strpos($key, 'color_');
                if ($pos === FALSE) {
                   $pos = strpos($key, 'main_');
@@ -332,6 +339,18 @@ class occupancy_plan_Output
                                  '" \></td>'."\n";
                      $ausgabe .= '               <td>&nbsp;</td><td style="width: 65%">&nbsp;</td>'."\n";
                      $ausgabe .= "       </tr>\n";                  
+                  } else {
+                     if ($key == 'view_past') {
+                        $tmpkey   = "_".$key;
+			$ausgabe .= '               <td style="width: 25%; text-align: left;">'.$settings->{$tmpkey}."</td>\n";
+			if ($settings->{$key} == 1) {
+			    $tmpkey   = 'checked';
+			} else {
+			    $tmpkey   = '';
+			}
+			$ausgabe .= '               <td colspan="3" style="text-align: left;"><input type="checkbox" name="'.$key.'" value="'.$settings->{$key}.'" onClick="valuewechseln();" '.$tmpkey.'></td>'."\n";
+			$ausgabe .= "       </tr>\n";
+                     }
                   }
                } else {
                   $ausgabe .= "       <tr>\n";
@@ -351,9 +370,15 @@ class occupancy_plan_Output
                   $ausgabe .= "       </tr>\n";
                }
             }
+            $teststr .= '-->';
+            $ausgabe .= $teststr;
             $ausgabe .= "       <tr>\n";
+            
+
+            
+            
             $ausgabe .= '               <td style="text-align:right;" colspan="4"><input type="submit" name="setsettings" class="button-primary" value="'.
-                         htmlentities(__('refresh', 'occupancyplan')).'" /></td>'."\n";
+                         htmlentities(__('refresh', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'" /></td>'."\n";
             $ausgabe .= "       </tr>\n";
             $ausgabe .= "</table>";
             $ausgabe .= "</form>\n";
@@ -451,7 +476,7 @@ class occupancy_plan_Output
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
             $ausgabe .= '                <input type="submit" name="anzeigeaktualisieren" class="button-primary" value="'.
-                        htmlentities(__('refresh', 'occupancyplan')).'" />'."\n";
+                        htmlentities(__('refresh', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'" />'."\n";
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '          </table>'."\n";         
             $ausgabe .= '          </td></tr>'."\n";
@@ -584,11 +609,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '; color: '.$settings->color_today.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").
                             '">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i.'</td>'."\n";
             }
          }
          if ($this->IsAdmin === TRUE) {
@@ -609,7 +634,7 @@ class occupancy_plan_Output
                           $jahr_.'-'.$mon_.'-'.$i.'" /></td>'."\n";
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.
-                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('today', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('today', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.';">'.$i."</td>\n";
             }
@@ -621,11 +646,11 @@ class occupancy_plan_Output
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.'; color: '.
                             $settings->color_today.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i."</td>\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i."</td>\n";
             }
          }
          $y++;
@@ -881,11 +906,11 @@ class occupancy_plan_WidgetCls
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '; color: '.$settings->color_today.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").
                             '">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i.'</td>'."\n";
             }
          }
          $ausgabe .= $link_else;
@@ -902,7 +927,7 @@ class occupancy_plan_WidgetCls
                           $jahr_.'-'.$mon_.'-'.$i.'" /></td>'."\n";
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.
-                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('today', 'occupancyplan')).'">'.$i.'</td>'."\n";
+                            '; color: '.$settings->color_today.';" title="'.htmlentities(__('today', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i.'</td>'."\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_tabinner.';">'.$i."</td>\n";
             }
@@ -914,11 +939,11 @@ class occupancy_plan_WidgetCls
             if($i == $heute_tag and $mon_ == $heute_mon and $jahr_ == $heute_jahr) {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.'; color: '.
                             $settings->color_today.';" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i."</td>\n";
             } else {
                $link_else = '            <td style="background-color: '.$settings->color_assigned.
                             '" title="'.
-                            htmlentities(__('busy', 'occupancyplan')).'">'.$i."</td>\n";
+                            htmlentities(__('busy', 'occupancyplan'), ENT_COMPAT | ENT_HTML401, "UTF-8").'">'.$i."</td>\n";
             }
          }
          $y++;
