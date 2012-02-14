@@ -6,7 +6,7 @@ Requires at least: 2.7.1 works only with !! PHP5 !!
 Tested up to: 3.2.1.
 Stable tag: 1.0.2.3
 
-Occupancy Plan ist ein einfaches Plugin fuer Wordpress, das eine Uebersicht von z.B. belegten Ferienwohnungen oder Ferienhaeuser kalendarisch anzeigt.
+Occupancy Plan ist ein einfaches Plugin fuer Wordpress, das eine Übersicht von z.B. belegten Ferienwohnungen oder Ferienhaeuser kalendarisch anzeigt.
 
 == Description ==
 
@@ -14,7 +14,7 @@ Occupancy Plan ist ein einfaches Plugin fuer Wordpress, das eine Uebersicht von 
 Viele graphische Einstellungen fuer Farbe und Formen, sowie das Eintragen der belegten Tage im Kalender koennen ganz leicht und Benutzerfreundlich vom Admin vorgenommen werden. Des weiteren koennen - unabhaengig von einander - mehrere Uebersichten im Blog dargestellt werden. Somit lassen sich Belegungsplaene, beispielsweise auch fuer mehrere Objekte wie bei Pensionen ueblich, einpflegen.
 
 == Installation ==
-Requires PHP5 or heigher! (Siehe unten)
+Requires PHP5 or higher! (Siehe unten)
 
 1. Das Plugin: Wordpress occupancyplan herunterladen.
 2. Die so erhaltene Zip-Datei: occupancyplan.zip entpacken.
@@ -62,6 +62,6 @@ Bitte stellt sicher, dass auf eurem Server PHP ab Version 5 läuft.
    <p>Plugin mit Wordpress-Version 3.0 erfolgreich getestet</p>
 -   1.0.2.3
    <p>Anzeige des Kalenders bei Themes wie TwentyTen u.a. korrigiert</p>
-   <p>Widget-Funktionalit�t hinzugef�gt</p>
+   <p>Widget-Funktionalität hinzugefügt</p>
    <p>Plugin mit Wordpress-Version 3.1.1. erfolgreich getestet</p>
    <p></p>
