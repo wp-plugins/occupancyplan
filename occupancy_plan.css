@@ -1,29 +1,67 @@
-<style type="text/css">
-
-table.occupancy_aussen {
-    border-width: 0px 0px 0px 0px;
-    border-spacing: 5px;
-    border-style: none none none none;
-    border-color: #000000 #000000 #000000 #000000;
-    border-collapse: separate;
-    text-align: center;
+#content table {
+    border: none;
 }
-			
-table.occupancy_kalender {
-    border-width: 1px 1px 1px 1px;
-    border-spacing: 1px;
-    border-style: solid solid solid solid;
+
+.occupancy_aussen {
+    padding: 0px 0px 0px 0px;
+    border-spacing: 5px;
     border-collapse: separate;
-    width: 100%;
+}
+
+.occupancy_aussen table {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px !important;
+}
+
+.occupancy_aussen tr, td {
+    padding: 0px !important;
+    margin: 0px;
+    border: none !important;
+}
+
+.occupancy_kalender {
     font-weight: normal;
     font-size: 10px;
     font-family: arial,helvetica,sans-serif;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-collapse: separate !important;
+    border-spacing: 1px; 
 }
-							
-table.occupancy_kalender td {
+
+.occupancy_kalender table {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.occupancy_kalender tr {
+    height: 10px !important;
+    padding: 0px !important;
+}
+
+.occupancy_kalender th {
+    text-align: left;
+    padding: 0px 0px 0px 3px !important;
+    margin: 0px !important;
+    border-spacing: 1px !important;
+}
+
+.occupancy_kalender td {
     text-align: center;
-    height: 10px;
     width: 14%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.unknown_  {
+    border-style: none !important;
+    /* display: none;  */
+}
+
+.occupancy_btns {
+    border-style: none !important;
+    /* display: none;  */
 }
 
 .submit input,
@@ -52,5 +90,3 @@ a.button {
     padding: 4px 10px;
     white-space: nowrap;
 }
-
-</style>
