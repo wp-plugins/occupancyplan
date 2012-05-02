@@ -357,11 +357,11 @@ function occupancy_plan_option_page() {
 		    $occupancy_plan_name = update_occupancy_plan($occupancy_plan_days, $occupancy_plan_id, $zeit_von, $zeit_bis);
 		    if (isset($occupancy_plan_name)) {
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name)).
+					htmlentities(sprintf(__("The Changes to [%s] has been adopted!", 'occupancyplan'), $occupancy_plan_name), ENT_COMPAT | 'ENT_HTML401', "UTF-8").
 					'</strong></p></div>'."\n";
 		    } else {
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(__('The Changes has been adopted!', 'occupancyplan')).'</strong></p></div>'."\n";
+					htmlentities(__('The Changes has been adopted!', 'occupancyplan'), ENT_COMPAT | 'ENT_HTML401', "UTF-8").'</strong></p></div>'."\n";
 		    }
 		} elseif ($action == 'change_occupancy_plan') {
 		//
@@ -379,14 +379,14 @@ function occupancy_plan_option_page() {
 		    if (isset($occupancy_plan_id)) {
 			update_occupancy_plan_settings($occupancy_plan_id, $occupancy_plan_name, $newSettings);
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(sprintf(__('Options [%s] successfully saved!', 'occupancyplan'),$occupancy_plan_name)).
+					htmlentities(sprintf(__('Options [%s] successfully saved!', 'occupancyplan'),$occupancy_plan_name), ENT_COMPAT | 'ENT_HTML401', "UTF-8").
 					'</strong></p></div>'."\n";
 		    }
 		} elseif ($action == 'add_occupancy_plan') {
 		    $occupancy_plan_id   = add_occupancy_plan($occupancy_plan_name);
 		    if ($occupancy_plan_id == -1){
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(sprintf(__('A Object with Name [%s] already exists!', 'occupancyplan'),$occupancy_plan_name)).
+					htmlentities(sprintf(__('A Object with Name [%s] already exists!', 'occupancyplan'),$occupancy_plan_name), ENT_COMPAT | 'ENT_HTML401', "UTF-8").
 					'</strong></p></div>'."\n";
 			$occupancy_plan_id = 1;
 		    }
@@ -397,11 +397,11 @@ function occupancy_plan_option_page() {
 			include_once('occupancy_plan_classes.php');
 			$tmp = new occupancy_plan_Settings($occupancy_plan_id);
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(sprintf(__('The first Object [%s] can not be deleted!', 'occupancyplan'),$tmp->occupancy_plan_name)).
+					htmlentities(sprintf(__('The first Object [%s] can not be deleted!', 'occupancyplan'),$tmp->occupancy_plan_name), ENT_COMPAT | 'ENT_HTML401', "UTF-8").
 					'</strong></p></div>'."\n";
 		    } else {
 			$dbg_str =	'<div class="updated"><p><strong>'.
-					htmlentities(sprintf(__('The Object [%s] successfully deleted!', 'occupancyplan'),$occupancy_plan_name)).
+					htmlentities(sprintf(__('The Object [%s] successfully deleted!', 'occupancyplan'),$occupancy_plan_name), ENT_COMPAT | 'ENT_HTML401', "UTF-8").
 					'</strong></p></div>'."\n";     
 		    }
 		}
