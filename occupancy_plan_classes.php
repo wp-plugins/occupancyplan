@@ -230,8 +230,8 @@ class occupancy_plan_Output
             $ausgabe .= htmlentities(__('Invoices are issued for both licenses. VAT will not be shown here.', 'occupancyplan'), ENT_COMPAT | 'ENT_HTML401', "UTF-8");
             $ausgabe .= '</p></strong>';
             $ausgabe .= '<strong><p>';	    
-            /* $ausgabe .= sprintf(__('Um eine dieser Zusatzlizenzen zu erwerben, melde dich per Mail bei mir. (%s)', 'occupancyplan'), */
-            $ausgabe .= sprintf(htmlentities(__('To purchase any of these additional licenses, register via email. (%s)', 'occupancyplan'), ENT_COMPAT | 'ENT_HTML401', "UTF-8"),
+            /* $ausgabe .= sprintf(__('Um eine dieser zusätzlichen Lizenzen zu erwerben, melden sie sich per Mail bei mir. Bitte geben sie unbedingt ihre Rechnungsadresse und den Domainnamen - auf der das Plugin werbefrei installiert werden soll - mit an. (%s)', 'occupancyplan'), */
+            $ausgabe .= sprintf(htmlentities(__('To purchase any of these additional licenses, it is required to provide the Domain Name (where you want to install the plugin), your Name and your Invoice Address. Please contact me via email. (%s)', 'occupancyplan'), ENT_COMPAT | 'ENT_HTML401', "UTF-8"),
 	                        sprintf('<a href="mailto:wordpress%su.de">wordpress%su.de</a>','@gods4','@gods4'));
             $ausgabe .= '</p></strong>';
             $ausgabe .= '</div>'."\n";
