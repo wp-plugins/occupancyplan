@@ -1,20 +1,16 @@
-﻿# Translation of the WordPress plugin   by .
-# Copyright (C) 2010 
+# Copyright (C) 2012 
 # This file is distributed under the same license as the  package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/occupancyplan\n"
-"POT-Creation-Date: 2010-08-10 23:45+0000\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <wordpress@gods4u.de>\n"
-"Language-Team: LANGUAGE <wordpress@gods4u.de>\n"
+"POT-Creation-Date: 2012-11-27 00:21:05+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: occupancy_plan_classes.php:4
 msgid "Change Name"
@@ -72,94 +68,95 @@ msgstr ""
 msgid "Count of columns to view"
 msgstr ""
 
-#: occupancy_plan_classes.php:19
-msgid "January"
+#: occupancy_plan_classes.php:18
+msgid "View past"
 msgstr ""
 
 #: occupancy_plan_classes.php:20
-msgid "February"
+msgid "January"
 msgstr ""
 
 #: occupancy_plan_classes.php:21
-msgid "March"
+msgid "February"
 msgstr ""
 
 #: occupancy_plan_classes.php:22
-msgid "April"
+msgid "March"
 msgstr ""
 
 #: occupancy_plan_classes.php:23
-msgid "May"
+msgid "April"
 msgstr ""
 
 #: occupancy_plan_classes.php:24
-msgid "June"
+msgid "May"
 msgstr ""
 
 #: occupancy_plan_classes.php:25
-msgid "July"
+msgid "June"
 msgstr ""
 
 #: occupancy_plan_classes.php:26
-msgid "August"
+msgid "July"
 msgstr ""
 
 #: occupancy_plan_classes.php:27
-msgid "September"
+msgid "August"
 msgstr ""
 
 #: occupancy_plan_classes.php:28
-msgid "October"
+msgid "September"
 msgstr ""
 
 #: occupancy_plan_classes.php:29
-msgid "November"
+msgid "October"
 msgstr ""
 
 #: occupancy_plan_classes.php:30
-msgid "December"
+msgid "November"
 msgstr ""
 
 #: occupancy_plan_classes.php:31
-msgid "Mon"
+msgid "December"
 msgstr ""
 
 #: occupancy_plan_classes.php:32
-msgid "Tue"
+msgid "Mon"
 msgstr ""
 
 #: occupancy_plan_classes.php:33
-msgid "Wed"
+msgid "Tue"
 msgstr ""
 
 #: occupancy_plan_classes.php:34
-msgid "Thu"
+msgid "Wed"
 msgstr ""
 
 #: occupancy_plan_classes.php:35
-msgid "Fri"
+msgid "Thu"
 msgstr ""
 
 #: occupancy_plan_classes.php:36
-msgid "Sat"
+msgid "Fri"
 msgstr ""
 
 #: occupancy_plan_classes.php:37
+msgid "Sat"
+msgstr ""
+
+#: occupancy_plan_classes.php:38
 msgid "Sun"
 msgstr ""
 
-#: occupancy_plan_classes.php:131
-#, php-format
+#: occupancy_plan_classes.php:134
 msgid "%s not exists. please check your database."
 msgstr ""
 
-#: occupancy_plan_classes.php:152 occupancy_plan_classes.php:164
-#, php-format
+#: occupancy_plan_classes.php:155 occupancy_plan_classes.php:167
 msgid "%s not exists."
 msgstr ""
 
-#: occupancy_plan_classes.php:216
-#, php-format
+#: occupancy_plan_classes.php:219
 msgid ""
 "There is the possibility of acquiring an additional license (cost: 15.00 "
 "EUR). With the acquisition of an additional license is granted %s the right "
@@ -167,136 +164,136 @@ msgid ""
 "the link to %s must remain the same."
 msgstr ""
 
-#: occupancy_plan_classes.php:222
-#, php-format
+#: occupancy_plan_classes.php:225
 msgid ""
 "Should the reference to %s will also be removed, you need to buy an extended "
 "additional license (cost: 20.00 EUR)."
 msgstr ""
 
-#: occupancy_plan_classes.php:225
+#: occupancy_plan_classes.php:228
 msgid "Thus the plug is then completely free of advertising."
 msgstr ""
 
-#: occupancy_plan_classes.php:227
+#: occupancy_plan_classes.php:230
 msgid "Invoices are issued for both licenses. VAT will not be shown here."
 msgstr ""
 
-#: occupancy_plan_classes.php:231
-#, php-format
-msgid "To purchase any of these additional licenses, register via email. (%s)"
+#: occupancy_plan_classes.php:234
+msgid ""
+"To purchase any of these additional licenses, it is required to provide the "
+"Domain Name (where you want to install the plugin), your Name and your "
+"Invoice Address. Please contact me via email. (%s)"
 msgstr ""
 
-#: occupancy_plan_classes.php:237
+#: occupancy_plan_classes.php:240
 msgid "To view the Overview, insert following text to page:"
 msgstr ""
 
-#: occupancy_plan_classes.php:256
+#: occupancy_plan_classes.php:259
 msgid "Select Overview"
 msgstr ""
 
-#: occupancy_plan_classes.php:260
+#: occupancy_plan_classes.php:263
 msgid "Select"
 msgstr ""
 
-#: occupancy_plan_classes.php:271
+#: occupancy_plan_classes.php:274
 msgid "delete Overview:"
 msgstr ""
 
-#: occupancy_plan_classes.php:275
+#: occupancy_plan_classes.php:278
 msgid "delete"
 msgstr ""
 
-#: occupancy_plan_classes.php:287
+#: occupancy_plan_classes.php:290
 msgid "Add new Overview:"
 msgstr ""
 
-#: occupancy_plan_classes.php:290
+#: occupancy_plan_classes.php:293
 msgid "Add"
 msgstr ""
 
-#: occupancy_plan_classes.php:302
+#: occupancy_plan_classes.php:305
 msgid "Change Overviewname:"
 msgstr ""
 
-#: occupancy_plan_classes.php:307
+#: occupancy_plan_classes.php:310
 msgid "Headline"
 msgstr ""
 
-#: occupancy_plan_classes.php:312
+#: occupancy_plan_classes.php:315
 msgid "Count of month:"
 msgstr ""
 
-#: occupancy_plan_classes.php:317
+#: occupancy_plan_classes.php:320
 msgid "Count of columns:"
 msgstr ""
 
-#: occupancy_plan_classes.php:356 occupancy_plan_classes.php:453
+#: occupancy_plan_classes.php:381 occupancy_plan_classes.php:479
 msgid "refresh"
 msgstr ""
 
-#: occupancy_plan_classes.php:585 occupancy_plan_classes.php:589
-#: occupancy_plan_classes.php:622 occupancy_plan_classes.php:626
-#: occupancy_plan_classes.php:882 occupancy_plan_classes.php:886
-#: occupancy_plan_classes.php:915 occupancy_plan_classes.php:919
+#: occupancy_plan_classes.php:612 occupancy_plan_classes.php:616
+#: occupancy_plan_classes.php:649 occupancy_plan_classes.php:653
+#: occupancy_plan_classes.php:909 occupancy_plan_classes.php:913
+#: occupancy_plan_classes.php:942 occupancy_plan_classes.php:946
 msgid "busy"
 msgstr ""
 
-#: occupancy_plan_classes.php:610 occupancy_plan_classes.php:903
+#: occupancy_plan_classes.php:637 occupancy_plan_classes.php:930
 msgid "today"
 msgstr ""
 
-#: occupancy_plan_options.php:98
+#: occupancy_plan_options.php:70
+msgid "Settings"
+msgstr ""
+
+#: occupancy_plan_options.php:111
 msgid "Please enter a Number between 1-100!"
 msgstr ""
 
-#: occupancy_plan_options.php:110
-#, php-format
+#: occupancy_plan_options.php:123
 msgid "\\\"%s\\\" must be entered a number!"
 msgstr ""
 
-#: occupancy_plan_options.php:110
+#: occupancy_plan_options.php:123
 msgid "count of month"
 msgstr ""
 
-#: occupancy_plan_options.php:116
+#: occupancy_plan_options.php:129
 msgid "Please enter a Number between 1-100"
 msgstr ""
 
-#: occupancy_plan_options.php:223
+#: occupancy_plan_options.php:235
 msgid "Occupancyplan-Plugin"
 msgstr ""
 
-#: occupancy_plan_options.php:223 occupancy_plan_options.php:386
+#: occupancy_plan_options.php:235 occupancy_plan_options.php:247
+#: occupancy_plan_options.php:412
 msgid "Occupancyplan"
 msgstr ""
 
-#: occupancy_plan_options.php:334
-#, php-format
+#: occupancy_plan_options.php:360
 msgid "The Changes to [%s] has been adopted!"
 msgstr ""
 
-#: occupancy_plan_options.php:338
+#: occupancy_plan_options.php:364
 msgid "The Changes has been adopted!"
 msgstr ""
 
-#: occupancy_plan_options.php:356
-#, php-format
+#: occupancy_plan_options.php:382
 msgid "Options [%s] successfully saved!"
 msgstr ""
 
-#: occupancy_plan_options.php:363
-#, php-format
+#: occupancy_plan_options.php:389
 msgid "A Object with Name [%s] already exists!"
 msgstr ""
 
-#: occupancy_plan_options.php:374
-#, php-format
+#: occupancy_plan_options.php:400
 msgid "The first Object [%s] can not be deleted!"
 msgstr ""
 
-#: occupancy_plan_options.php:378
-#, php-format
+#: occupancy_plan_options.php:404
 msgid "The Object [%s] successfully deleted!"
 msgstr ""
 
