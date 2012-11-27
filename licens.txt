@@ -18,8 +18,8 @@ http://www.ferienstrandwohnung.de/
 
 Diese Links muessen unveraendert belassen werden.  Die betroffene Stelle im Quelltext ist wie folgt markiert:
 
-/* BEGINN ZUSATZ LIZENZ (c) 2009 Peter Welz */
+/* BEGINN ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
 
-/* ENDE ZUSATZ LIZENZ (c) 2009 Peter Welz */
+/* ENDE ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
 
 Bei der Weitergabe des Plugins/Programmes ist neben der GPL3 Lizenz immer diese zusaetzliche Einschraenkung mit anzugeben/auszuliefern.
