@@ -1,6 +1,6 @@
 WP Plugin occupancyplan
 
-Copyright (C) [2009]  [Peter Welz]
+Copyright (C) [2009-2014]  [Peter Welz]
 
 Dieses Plugin/Programm ist freie Software. Sie koennen es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veroeffentlicht, weitergeben und/oder modifizieren, gemaess Version 3 der Lizenz.
 
@@ -18,8 +18,8 @@ http://www.ferienstrandwohnung.de/
 
 Diese Links muessen unveraendert belassen werden.  Die betroffene Stelle im Quelltext ist wie folgt markiert:
 
-/* BEGINN ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+/* BEGINN ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
 
-/* ENDE ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+/* ENDE ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
 
 Bei der Weitergabe des Plugins/Programmes ist neben der GPL3 Lizenz immer diese zusaetzliche Einschraenkung mit anzugeben/auszuliefern.

@@ -448,7 +448,7 @@ class occupancy_plan_Output
          //colspan
          $ausgabe .= '        <td colspan="'.$settings->view_columns.'">'."\n";         
          if ($this->IsAdmin === FALSE) {
-		   /* BEGINN ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+		   /* BEGINN ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
 			/* Folgende Zeilen muessen IMMER unter der Uebersicht ausgegeben werden. Wenn dies nicht gegeben ist, haben sie keine Berechtigung, */
 			/* dieses Script in irgendeiner Art und Weise zu benutzen/ zu aendern. */
 			/* Sind sie im Besitz einer Rechnung ueber eine erweiterte Zusatzlizenz (Kosten: 20.00 EUR), dann */
@@ -458,7 +458,7 @@ class occupancy_plan_Output
                         ' border-collapse: separate; width: 100%; text-align: center; font-size: 7px;">'."\n";
             $ausgabe .= '            <tr>'."\n";
             $ausgabe .= '              <td>'."\n";
-            $ausgabe .= '&copy; 2009-2012 by Peter Welz <a href="http://www.gods4u.de/"'.
+            $ausgabe .= '&copy; 2009-2014 by Peter Welz <a href="http://www.gods4u.de/"'.
                         ' target="_blank" title="Belegungsplan - Occupancyplan - Plugin f&uuml;r Wordpress" alt="Belegungsplan Plugin f&uuml;r Wordpress - Occupancyplan">Belegungsplan</a>';
 			/* Sind sie im Besitz einer Rechnung über die Zusatzlizenz (Kosten: 15.00 EUR), dann */
 			/* duerfen folgende Zeilen auskommentiert werden. Die Zeilen ueber diesem Kommentar muessen aber erhalten bleiben. */			
@@ -470,7 +470,7 @@ class occupancy_plan_Output
             $ausgabe .= '              </td>'."\n";
             $ausgabe .= '            </tr>'."\n";	
             $ausgabe .= '          </table>'."\n";
-			/* ENDE ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+			/* ENDE ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
          } else {
             $ausgabe .= '          <table>'."\n";
             $ausgabe .= '            <tr>'."\n";
@@ -787,7 +787,7 @@ class occupancy_plan_WidgetCls
          $ausgabe .= '      <tr>'."\n";
          $ausgabe .= '        <td colspan="2">'."\n";         
 
-		   /* BEGINN ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+		   /* BEGINN ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
 			/* Folgende Zeilen muessen IMMER unter der Uebersicht ausgegeben werden. Wenn dies nicht gegeben ist, haben sie keine Berechtigung, */
 			/* dieses Script in irgendeiner Art und Weise zu benutzen/ zu aendern. */
 			/* Sind sie im Besitz einer Rechnung ueber eine erweiterte Zusatzlizenz (Kosten: 20.00 EUR), dann */
@@ -797,7 +797,7 @@ class occupancy_plan_WidgetCls
                      ' border-collapse: separate; width: 100%; text-align: center; font-size: 7px;">'."\n";
          $ausgabe .= '            <tr>'."\n";
          $ausgabe .= '              <td>'."\n";
-         $ausgabe .= '&copy; 2009-2012 by Peter Welz <a href="http://www.gods4u.de/"'.
+         $ausgabe .= '&copy; 2009-2014 by Peter Welz <a href="http://www.gods4u.de/"'.
                      ' target="_blank" title="Belegungsplan - Occupancyplan - Plugin f&uuml;r Wordpress" alt="Belegungsplan Plugin f&uuml;r Wordpress - Occupancyplan">Belegungsplan</a>';
 			/* Sind sie im Besitz einer Rechnung über die Zusatzlizenz (Kosten: 15.00 EUR), dann */
 			/* duerfen folgende Zeilen auskommentiert werden. Die Zeilen ueber diesem Kommentar muessen aber erhalten bleiben. */			
@@ -809,7 +809,7 @@ class occupancy_plan_WidgetCls
          $ausgabe .= '              </td>'."\n";
          $ausgabe .= '            </tr>'."\n";	
          $ausgabe .= '          </table>'."\n";
-			/* ENDE ZUSATZ LIZENZ (c) 2009-2012 Peter Welz */
+			/* ENDE ZUSATZ LIZENZ (c) 2009-2014 Peter Welz */
 
          $ausgabe .= '        </td>'."\n";
          $ausgabe .= '      </tr>'."\n";         
