@@ -34,6 +34,10 @@ AddHandler x-mapp-php5 .php`
 
 1. Eine beispielhafte Darstellung der Uebersicht (wordpress_plugin_occupancyplan.jpg)
 
+2. Anzeige in der Pluginübersicht
+
+3. Menü - Belegungsplan
+
 == Frequently Asked Questions ==
 
 = Was muss ich in meine Seite/Artikel einfügen, damit der Belegungsplan erscheint? =
